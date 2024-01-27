@@ -168,7 +168,7 @@ color: #ffffff;
     bottom: 0px;
     right: 0px;
     background-repeat: no-repeat;
-    background-image: url('../img/projektiranje.jpg');
+    background-image: url('/img/projektiranje.jpg');
     background-size: cover;
     background-position: center center;
     z-index: -1;
