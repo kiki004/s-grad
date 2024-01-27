@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../stil/bruna3d.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="../stil/lightbox.css">
+    <title>S-grad</title>
+
+<style>
+        .container-ozadje{
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            z-index: 1;
+            top: 0px;
+            left: 0px;
+            bottom: 0px;
+            right: 0px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: url('../img/les_letnice.png');
+            background-size: cover;
+            height: 80vh;
+            position: relative;
+        }
+        .container-ozadje::after{
+            content: "";
+            top: 0px;
+            left: 0px;
+            bottom: 0px;
+            right: 0px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: linear-gradient(0deg, #2e292526 30%, #2E2925 100%), linear-gradient(180deg,#2e292526 30%, #2e2925 100%);
+            background-size: cover;
+            height: 80vh;
+            z-index: -1;
+            position: absolute;
+        }
+
+</style>
+</head>
+
+<body>
+    <script src="../src/lightbox-plus-jquery.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+    <script src="../script.js"></script>
+        <section>
+            <header id="nav">
+            <div id="logo">
+                <a href="../index.html"><img src="../img/logobel.svg" alt="logo"></a>
+            </div>
+            <div class="nav-pages">
+                <ul id="povezave">
+                    <li><a href="../index.html"class="link">Domov</a></li>
+                    <li><a href="onas.html"class="link ">O nas</a></li>
+                    <li><a href="tehnologija.html"class="link ">tehnologija</a></li>
+                    <li><a href="#"class="link">Galerija</a></li>
+                    <li><a href="izdelki.html"class="link ">Izdelki</a></li>           
+                    <li><a href="#"class="link">Kontakt</a></li>
+                </ul>
+            </div>
+     </header>
+     <!-----------------------------1.DEL--------------------------------------------------------------->
+         <div class="container-ozadje"> 
+            <div class="naslov">
+                <h1>Vrata svetega Urbana</h1>
+                <p>
+                   Vrata so iz hrastovega lesa. Na njih je rezbarija svetega Urbana.
+                </p>
+            </div>
+         </div> 
+ <!-----------------------------------Galerija----------------------------------------->
+        </section> 
+<div class="postavitev-galerije">
+    <div class="container">
+     <div class="slider-wrapper">
+      <button id="prev-slide" class="slide-button material-symbols-rounded">
+        chevron_left
+      </button>
+      <ul class="image-list">
+        <a href="../img/stavbno pohištvo/cerkvena01.JPG" data-lightbox="models" data-title="Slika 1">
+            <img class="image-item" src="../img/stavbno pohištvo/cerkvena01.JPG" alt="img-1" />
+        </a>
+
+        <a href="../img/stavbno pohištvo/cerkvena1.JPG" data-lightbox="models" data-title="Slika 2">
+            <img class="image-item" src="../img/stavbno pohištvo/cerkvena1.JPG" alt="img-2" />
+        </a>
+
+        <a href="../img/stavbno pohištvo/CERKVENA2.JPG" data-lightbox="models" data-title="Slika 3">
+            <img class="image-item" src="../img/stavbno pohištvo/CERKVENA2.JPG" alt="img-3" />
+        </a>
+
+        <a href="../img/stavbno pohištvo/cerkvena3.JPG" data-lightbox="models" data-title="Slika 4">
+            <img class="image-item" src="../img/stavbno pohištvo/cerkvena3.JPG" alt="img-4" />
+        </a>
+
+        <a href="../img/stavbno pohištvo/cerkvena4.JPG" data-lightbox="models" data-title="Slika 5">
+            <img class="image-item" src="../img/stavbno pohištvo/cerkvena4.JPG" alt="img-5" />
+        </a>
+
+
+      </ul>
+      <button id="next-slide" class="slide-button material-symbols-rounded">
+        chevron_right
+      </button>
+    </div>
+    <div class="slider-scrollbar">
+      <div class="scrollbar-track">
+        <div class="scrollbar-thumb"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-ozadje" style="height: 50vh;"> 
+
+</div> 
+    <!--------------------------------------NOGA----------------------------------------------------------->
+<div class="container3">
+    <div class="noga">
+        <div class="box1">
+           <ul>
+            <li><a href="index.html"><p>S-GRAD d.o.o.</p></a></li>
+            <li><a href="index.html"><p>Varstvo osebnih podatkov</p></a></li>
+            <li><a href="index.html"><p>Pogoji uporabe</p></a></li>
+            <li><a href="index.html"><p>O nas</p></a></li>
+            <li><a href="index.html"><p>Galerija</p></a></li>
+            <li><a href="index.html"><p>Kontakt</p></a></li>
+           </ul>
+        </div>
+        <div class="box1">
+            <div id="logo-noga">
+                <img src="../img/logobel.svg" alt="logo"><br>
+            </div>
+            <div id="socialna-omrezja">
+                <a href="https://www.youtube.com/channel/UCdSlhh6HXzBkvX7LWV7mZDA"target="_blank"><img src="../img/social_network_logos/yt.svg" alt="YouTube"></a>
+                <a href="#"><img src="../img/social_network_logos/inst.svg" alt="Instagram"></a>
+                <a href="#"><img src="../img/social_network_logos/fb.svg" alt="Facebook"></a>
+                <a href="#"><img src="../img/social_network_logos/x.svg" alt="X"></a>
+            </div>
+        </div>
+        <div class="box1">
+            <div class="kontakt-noga">
+                <h2>Kontakt</h2>
+                <ul>
+                    <li><p>S-GRAD d.o.o.</p></li>
+                    <li><p>Križevska vas 21</p></li>
+                    <li><p>8330 Metlika</p></li>
+                    <li><p>T-Lesni del: +386 41 825 307</p></li>
+                    <li><p>T-Gradbeni del: +386 31 720 272</p></li>
+                    <li><p>M: kristjan.lukek@gmail.com</p></li>
+                   </ul>
+            </div>
+        </div>
+    </div>
+</div>  
+</body>
+</html>

@@ -1,0 +1,337 @@
+:root{
+    --yellow:#FCB31C;
+    --siva:#cccccc;
+    --rj:#2e2925;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+ul{
+    list-style-type: none;
+}
+h1{
+    font-size: 44px;
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--yellow);
+}
+h2{
+        font-size: 27px;
+        font-family: 'Times New Roman', Times, serif;
+        color: var(--yellow);
+}
+a{
+    font-size: 2rem;
+    text-decoration: none;
+}
+p{
+    color: #ffffff;
+    font-family: Helvetica,sans-serif ;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+/*---------------------------------nav bar-----------------------*/
+
+header{
+    margin: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 0;
+    background-color: #2e2925f0;
+    border-end-end-radius: 200%;
+    border-end-start-radius: 200%;
+    height: 110px;
+    z-index: 2; 
+    position: fixed;
+    transition:all 0.5s linear;
+  }
+  
+  .nav-pages {
+    width: 1400px;
+   padding-top: 0%;
+    margin-top: 8px;
+    transition: all 0.5s linear;
+  }
+  #povezave{
+    padding-top: 5px;
+    margin-right:auto;
+    margin-left:auto;
+    justify-content: center;
+    display: flex;
+    transition: all 0.5s linear;  
+   
+  }
+  #povezave li{
+    text-align: center;
+    height: 100%;
+     width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    float:none;
+    transition: all 0.5s linear;  
+  }
+
+  .link{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top:-5% ;
+    /* margin: 0% 15px;*/
+    padding: 13px;
+     text-transform: uppercase;
+     text-decoration: none;
+     color: #ffffff;
+     border: solid rgba(255, 255, 255, 0) 0px;
+     border-radius: 25px;
+     transition:  0.5s linear;
+     position: relative;
+        
+  }
+  
+  #povezave li:nth-child(4), #povezave li:nth-child(5), #povezave li:nth-child(6)
+  {
+    float:right;
+   
+  }
+  
+  #povezave li:nth-child(1), #povezave li:nth-child(2), #povezave li:nth-child(3)
+  {
+    float:left;
+   
+  }
+  #povezave li:nth-child(3)
+  {
+   margin-right: 10%; 
+  }
+  #povezave li:nth-child(4)
+  {
+   margin-left: 10%; 
+  }
+  #nav{
+  display: flex;
+  height: 110px;
+  padding-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  }
+  #logo{
+    width: 220px;
+    padding-top: 5px;
+    margin-bottom: 5px;
+   transition: all 0.5s linear;
+   position: absolute;
+  }
+  #logo img{
+    width: 100%;
+    /*margin-left: -68%;*/
+  }
+  
+  .selected{
+    border: solid var(--yellow )0px;
+    border-radius: 25px;
+    background-color: var(--yellow);
+    color:black;
+  }
+  .selected:hover{
+  color: #ffffff;
+  }
+  
+  .link:hover{
+    border: solid var(--yellow )0px;
+    border-radius: 25px;
+    background-color: var(--yellow);
+    transition: all 0.7s linear ;
+    position: relative;
+  }
+
+  /*----------------------1-DEL-------------------------------*/
+.container{
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-color: var(--rj);
+    background-repeat: repeat-y;
+    background-position: center;
+    background-image: url('../img/les_letnice.png');
+    background-size:contain;
+    height: 100%;
+    max-height: 500vh;
+    position: relative;
+}
+.container::after{
+    content: "";
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-repeat: repeat-y;
+    background-position: center;
+    background-image: linear-gradient(0deg, #2e292526 30%, #2E2925 100%), linear-gradient(180deg,#2e292526 30%, #2e2925 100%);
+    background-size: cover;
+    height: 100;
+    min-height: 100vh;
+    z-index: -1;
+    position: absolute;
+}
+.naslov{
+    margin-top: 15%;
+    text-align: center;
+    text-shadow: black 3px 3px;
+}
+
+.gallery{
+  margin-top: 70px;
+   min-height: 100vh; 
+   padding-bottom: 100px;
+}
+.controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    list-style-type: none;
+}
+.gumb{
+    height: 40px;
+    width: 170px;
+    color: var(--rj);
+    background: var(--siva);
+    font-size: 1.3rem;
+    line-height: 40px;
+    cursor: pointer;
+    margin: 20px;
+    box-shadow: 0 3px 5px rgba(255, 255, 255, 0.3);
+    text-align: center;
+    border-radius: 10px;
+}
+ .active{
+    background: var(--yellow);
+}
+.image-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.slika{
+    height:300px;
+    width:400px;
+    overflow: hidden;
+    border: solid var(--siva)15px;
+    border-radius: 5px;
+    margin: 20px;   
+    transition: .3s ease-in-out all; 
+}
+.image-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .3s ease-in-out all;
+}
+.image-container .slika:hover img{
+    transform: scale(1.2);
+
+}
+.slika:hover{
+  border: solid var(--yellow) 15px;
+  border-radius: 15px;
+}
+/*-----------------------------noga-----------------------------------------*/
+
+.container3{
+  margin: 0;
+ padding-top:6% ;
+  width: 100%;
+  background-color: var(--rj);
+  height:40vh;
+  
+
+}
+.noga{
+  display: flex;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+
+}
+
+.box1:nth-child(1){
+  padding: 4% 7% 3% 12%;
+  text-align: center;
+  border-right: #ffffff20 solid 0.1px;
+
+}
+.box1:nth-child(2){
+  margin: 0;
+  width: 400px;
+  padding: 1% 2%;
+  text-align: center;
+  border-right: #ffffff20 solid 0.1px;
+}
+.box1:nth-child(3){
+  padding: 3% 9% 3% 7%;
+  text-align: center;
+ 
+}
+.box1 img{
+  width: 200px;
+  margin-bottom: 20px;
+}
+.box1 a img{
+  width: 8%; 
+  margin-left: 4%;
+  scale: 1;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+.box1 a img:hover{
+  opacity: 0.5;
+  scale: 1.2;
+}
+
+.box1 ul li{
+  text-align: left;
+  list-style-type: none;
+  margin-top: 4%;
+}
+.box1 ul li a{
+  text-decoration: none;
+  list-style-type: none;
+}
+.box1 ul li a p{
+  font-family:'Arial Narrow', Arial, sans-serif;
+  font-weight: 500;
+  color:var(--siva);
+  font-size: 1.1rem;
+  transition: linear 0.2s;
+}
+.box1 ul li a p:hover{
+  color: var(--yellow);
+}
+.kontakt-noga h2{
+  color: white;
+  text-shadow: 1px 1px var(--yellow);
+}
+.kontakt-noga ul li{
+  text-decoration: none;
+  list-style-type: none;
+}
+.kontakt-noga ul li p{
+  font-family:'Arial Narrow', Arial, sans-serif;
+  font-weight: 500;
+  color:var(--siva);
+  font-size: 1.1rem;
+}
