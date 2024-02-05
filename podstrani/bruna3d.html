@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="../stil/lightbox.css">
     <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet"> <!--puščica gor-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!--animacije-->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script> 
     <title>S-grad</title>
 
 </head>
@@ -19,7 +21,7 @@
     <script src="../src/lightbox-plus-jquery.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
     <script src="../script.js"></script>
-        <section>
+        <section id="top">
             <header id="nav">
             <div id="logo">
                 <a href="../index.html"><img src="../img/logobel.svg" alt="logo"></a>
@@ -29,17 +31,17 @@
                     <li><a href="../index.html"class="link">Domov</a></li>
                     <li><a href="onas.html"class="link ">O nas</a></li>
                     <li><a href="tehnologija.html"class="link ">tehnologija</a></li>
-                    <li><a href="#"class="link">Galerija</a></li>
+                    <li><a href="galerija.html"class="link">Galerija</a></li>
                     <li><a href="izdelki.html"class="link ">Izdelki</a></li>           
-                    <li><a href="#"class="link">Kontakt</a></li>
+                    <li><a href="kontakt.html"class="link">Kontakt</a></li>
                 </ul>
             </div>
      </header>
      <!-----------------------------1.DEL--------------------------------------------------------------->
          <div class="container-ozadje"> 
             <div class="naslov">
-                <h1>Gozdna brunarica</h1>
-                <p>
+                <h1 data-aos="fade-right"data-aos-duration="1000"data-aos-delay="150">Gozdna brunarica</h1>
+                <p data-aos="fade-left"data-aos-duration="1000"data-aos-delay="450">
                     Brunarica je v fazi postavitve. Ima skelet iz lepljenega smrekovega lesa. Debelina brun je 90mm Ima 44 m<sup>2</sup> skupne bivalne površine 
                     in 21 m<sup>2</sup> terase. Ima dva nadstropja z frčado ter 7 oken. Zunanje mere z robovi strehe so 8.6 x 6.9m. Streha ima naklon
                     40%. 
@@ -49,7 +51,7 @@
  <!-----------------------------------Galerija----------------------------------------->
         </section> 
 <div class="postavitev-galerije">
-    <div class="container">
+    <div class="container"data-aos="zoom-in"data-aos-duration="800"data-aos-delay="0">
      <div class="slider-wrapper">
       <button id="prev-slide" class="slide-button material-symbols-rounded">
         chevron_left
@@ -133,5 +135,31 @@
         </div>
     </div>
 </div>  
+<a data-aos="fade-up" data-aos-duration="600"data-aos-offset="250" href="#top" class="scrollLink">
+    <span class="material-icons">arrow_upward</span>
+  </a>
+  
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script>
+AOS.init({
+        easing: 'ease-in-out-sine'
+      });
+
+      setInterval(addItem, 300);
+
+      var itemsCounter = 1;
+      var container = document.getElementById('aos-demo');
+
+      function addItem () {
+        if (itemsCounter > 42) return;
+        var item = document.createElement('div');
+        item.classList.add('aos-item');
+        item.setAttribute('data-aos', 'fade-up');
+       // item.innerHTML = '<div class="aos-item__inner"><h3>' + itemsCounter + '</h3></div>';
+        container.appendChild(item);
+        itemsCounter++;
+      } 
+</script>
 </body>
 </html>

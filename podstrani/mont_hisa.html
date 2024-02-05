@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="../stil/lightbox.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet"> <!--puščica gor-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!--animacije-->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script> 
+   
     <title>S-grad</title>
 
 <style>
@@ -23,7 +27,7 @@
     <script src="../src/lightbox-plus-jquery.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
     <script src="../script.js"></script>
-        <section>
+        <section id="top">
             <header id="nav">
             <div id="logo">
                 <a href="../index.html"><img src="../img/logobel.svg" alt="logo"></a>
@@ -35,7 +39,7 @@
                     <li><a href="tehnologija.html"class="link ">tehnologija</a></li>
                     <li><a href="galerija.html"class="link">Galerija</a></li>
                     <li><a href="izdelki.html"class="link ">Izdelki</a></li>           
-                    <li><a href="#"class="link">Kontakt</a></li>
+                    <li><a href="kontakt.html"class="link">Kontakt</a></li>
                 </ul>
             </div>
      </header>
@@ -43,14 +47,14 @@
      <!-----------------------------1.DEL--------------------------------------------------------------->
          <div class="container-ozadje"> 
             <div class="naslov">
-                <h1>Montažna hiška</h1>
-                <p>
+                <h1 data-aos="fade-right"data-aos-duration="1000"data-aos-delay="150">Montažna hiška</h1>
+                <p data-aos="fade-left"data-aos-duration="1000"data-aos-delay="250">
                   Hiša je pritlična in ima 35m<sup>2</sup> z 14m<sup>2</sup> nadstrška. Skupne dimenzije so 9m x 7m.
                    Debelina montažne stene je 250mm, ki je obita z brunami. Hiša je bila narejena po naroćilu ter na kluč.
 
                 </p>
             </div>
-            <video height="40%" controls autoplay loop>
+            <video height="40%" controls autoplay loop data-aos="fade-right"data-aos-duration="1000"data-aos-delay="1050">
                 <source src="../img/montazne/hiša.mp4" type="video/mp4">
             </video>
             <br style="height: 100px;">
@@ -58,7 +62,7 @@
  <!-----------------------------------Galerija----------------------------------------->
          
 <div class="postavitev-galerije">
-    <div class="container">
+    <div class="container"data-aos="zoom-in"data-aos-duration="800">
      <div class="slider-wrapper">
       <button id="prev-slide" class="slide-button material-symbols-rounded">
         chevron_left
@@ -103,12 +107,10 @@
     </div>
   </div>
 </div>
-<!-------------------------------------------3D MODEL--------------------------------------------->
+<!-------------------------------------------video--------------------------------------------->
  <div class="container-ozadje"> 
-    <!-- <div class="model">
-        <model-viewer src="../model/bruna glb/bruna5.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="commerce" poster="poster.webp" shadow-intensity="1"> </model-viewer>
-    </div>-->
-    <div class="video">
+
+    <div class="video"data-aos="zoom-in"data-aos-duration="800">
         <iframe width="1064" height="598.5" src="https://www.youtube.com/embed/zCAn-9Qhp04?si=25qJZZKYfAk4QYus" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
 </div> 
@@ -152,5 +154,35 @@
         </div>
     </div>
 </div>  
+<a href="#top" class="scrollLink">
+    <span class="material-icons">arrow_upward</span>
+  </a>
+  
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ 
+  <script>
+    
+  
+  AOS.init({
+          easing: 'ease-in-out-sine'
+        });
+  
+        setInterval(addItem, 300);
+  
+        var itemsCounter = 1;
+        var container = document.getElementById('aos-demo');
+  
+        function addItem () {
+          if (itemsCounter > 42) return;
+          var item = document.createElement('div');
+          item.classList.add('aos-item');
+          item.setAttribute('data-aos', 'fade-up');
+         // item.innerHTML = '<div class="aos-item__inner"><h3>' + itemsCounter + '</h3></div>';
+          container.appendChild(item);
+          itemsCounter++;
+        }
+      
+  </script>
 </body>
 </html>

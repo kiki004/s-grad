@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../stil/kontakt.css">
+    <link rel="stylesheet" href="/stil/kontakt.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet"> <!--puščica gor-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!--animacije-->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script> 
     <title>S-grad</title>
 
 </head>
 <body>
-    <script src="../script.js"></script>
     <script src="https://kit.fontawesome.com/22422329a3.js" crossorigin="anonymous"></script>
-        <section>
+    <script src="../script.js"></script>
+    <section id="top">
             <header id="nav">
             <div id="logo">
                 <a href="../index.html"><img src="../img/logobel.svg" alt="logo"></a>
@@ -32,8 +35,8 @@
         <div class="bgimg1">
             <section id="main-box">
                 <div class="main-container">
-                    <h1>Vstopi v stik</h1>
-                     <p>"Ne gradimo samo hiš, ampak tudi sanje. Naši domovi so platno za vaše življenje, prostor, kjer lahko vaše sanje zaživijo."</p>
+                    <h1 data-aos="fade-right"data-aos-duration="1000"data-aos-delay="150">Vstopi v stik</h1>
+                     <p data-aos="fade-left"data-aos-duration="1000"data-aos-delay="450">"Ne gradimo samo hiš, ampak tudi sanje. Naši domovi so platno za vaše življenje, prostor, kjer lahko vaše sanje zaživijo."</p>
                 </div>
             </section>
         </div>
@@ -41,14 +44,14 @@
         <div class="container">  
           <div class="contact-container">
             <div class="info-container">
-                <div class="box">
+                <div class="box" data-aos="zoom-in"data-aos-duration="800"data-aos-offset="200">
                     <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
                     <div class="text">
                         <h3>NASLOV</h3>
                        <p id="naslov">Berčice 5, <br>8330 Metlika, <br>Slovenija</p>
                     </div>
                 </div>
-                    <div class="box">
+                    <div class="box"data-aos="zoom-in"data-aos-duration="800"data-aos-offset="200">
                         <div class="icon"><i class="fa-solid fa-phone"></i></div>
                         <div class="text">
                             <h3>TELEFON</h3>
@@ -57,7 +60,7 @@
                             </ul>
                         </div>
                         </div>
-                        <div class="box">
+                        <div class="box"data-aos="zoom-in"data-aos-duration="800"data-aos-offset="200">
                             <div class="icon"><i class="fa-solid fa-phone"></i></div>
                             <div class="text">
                                 <h3>TELEFON</h3>
@@ -67,7 +70,7 @@
                             </div>
                             </div>
                    
-                <div class="box">
+                <div class="box"data-aos="zoom-in"data-aos-duration="800"data-aos-offset="200">
                     <div class="icon"><i class="fa-solid fa-envelope"></i></div>
                         <div class="text">
                             <h3>EMAIL</h3>
@@ -76,7 +79,32 @@
                 </div>    
             </div>
             <div class="box-container">
-                
+                <form action="">
+                    <h2></h2>
+                    <div class="polje"data-aos="zoom-in"data-aos-duration="800"data-aos-offset="200"data-aos-delay="0">
+                        <label for="fname"></label><br>
+                        <input type="text" id="fname" name="fname" placeholder="Ime"><div class="line"></div>
+                    </div>
+                    <div class="polje"data-aos="zoom-in"data-aos-duration="800"data-aos-offset="200"data-aos-delay="250">
+                        <label for="lname"></label><br>
+                        <input type="text" id="lname" name="lname" placeholder="Priimek"><div class="line"></div>
+                        
+                    </div>
+                    <div class="polje"data-aos="zoom-in"data-aos-duration="800"data-aos-offset="200"data-aos-delay="450">
+                        <label for="kraj"></label><br>
+                        <input type="text" id="kraj" name="kraj" placeholder="Kraj"><div class="line"></div>
+                    </div>
+                    <div class="polje"data-aos="zoom-in"data-aos-duration="800"data-aos-offset="200"data-aos-delay="650">
+                        <label for="email"></label><br>
+                        <input type="email" id="email" name="email" placeholder="E-mail"><div class="line"></div>
+                    </div>
+                    <div class="polje"data-aos="zoom-in"data-aos-duration="800"data-aos-offset="200"data-aos-delay="850">
+                        <textarea name="sporočilo" id="sporocilo" cols="60" rows="6" placeholder="Sporočilo"></textarea><div class="line line-t"></div>
+                    </div>
+                    <div class="gumb"data-aos="zoom-in"data-aos-duration="800"data-aos-offset="100"data-aos-delay="1050">
+                        <input type="submit" value="Pošlji">
+                    </div>
+                </form>
             </div>
         </div>
         </div>
@@ -119,7 +147,32 @@
         </div>
     </div>
 </div>  
+<a data-aos="fade-up" data-aos-duration="600"data-aos-offset="250" href="#top" class="scrollLink">
+    <span class="material-icons">arrow_upward</span>
+  </a>
+  
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
+<script>
+AOS.init({
+        easing: 'ease-in-out-sine'
+      });
+
+      setInterval(addItem, 300);
+
+      var itemsCounter = 1;
+      var container = document.getElementById('aos-demo');
+
+      function addItem () {
+        if (itemsCounter > 42) return;
+        var item = document.createElement('div');
+        item.classList.add('aos-item');
+        item.setAttribute('data-aos', 'fade-up');
+       // item.innerHTML = '<div class="aos-item__inner"><h3>' + itemsCounter + '</h3></div>';
+        container.appendChild(item);
+        itemsCounter++;
+      } 
+</script>
 </body>
 </html>
 

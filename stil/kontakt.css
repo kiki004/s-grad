@@ -4,7 +4,10 @@
     --rj:#2e2925;
     --rob_card: 20px;
 }
-
+::placeholder{
+  color: var(--siva);
+  opacity: .8;
+}
 *{
     margin: 0;
     padding: 0;
@@ -19,7 +22,7 @@ h1{
     color: var(--yellow);
 }
 h2{
-        font-size: 27px;
+        font-size: 2rem;
         font-family: 'Times New Roman', Times, serif;
         color: var(--yellow);
 }
@@ -69,10 +72,8 @@ header{
   text-align: center;
   height: 100%;
    width: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  float:none;
-  transition: all 0.5s linear;  
+  margin-top: 10px;
+  transition: all 0.5s linear; 
 }
 
 .link{
@@ -150,6 +151,36 @@ color: #ffffff;
   transition: all 0.7s linear ;
   position: relative;
 }
+/*----------------- vrni domozu------------------*/
+.scrollLink {
+  position: fixed;
+  top: 50%;
+  right: 50px;
+  display: none; /*v js imaš inline-flex če nedela spremeni nazaj*/
+  align-items: center;
+  justify-content: center;
+  background-color: var(--yellow);
+  border-radius: 2rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  transition: 0.2s ease-out;
+  z-index: 2;
+
+}
+.scrollLink span {
+  color: black;
+  font-size: 2.5rem;
+  transition: 0.2s ease-out;
+}
+
+.scrollLink:hover {
+  background-color:#d3910e;
+
+}
+.scrollLink:hover span {
+  transform: translateY(-4px);
+  color: var(--siva);
+}
 /*--------------------------------------1-del strani------------------------------*/
 .bgimg1{
     margin: 0;
@@ -211,10 +242,14 @@ color: #ffffff;
     right: 0px;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url('../img/les_letnice.png');
+    background-image: url('/img/les_letnice.png');
     background-size: cover;
     height: 100vh;
     position: relative;
+    display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items:center;
 }
 .container::after{
     content: "";
@@ -231,21 +266,24 @@ color: #ffffff;
     position: absolute;
 }
 .contact-container{
-    position: absolute;
-    flex-direction: column;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-   
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: row;
 }
 .info-container{
-    margin-right: 10%;
+  display:flex;
+  align-items: center;
+  padding-left: 50px;
+  justify-content: center;
+ flex: 50%;
+ flex-direction: column;
 }
+
 .icon{
     position: absolute;
-    margin:-25px -50px;
+    margin:20px -50px;
     width: 50px;
     height: 50px;
     display: flex;
@@ -257,7 +295,8 @@ color: #ffffff;
     border-radius: 50%;
 }
 .text{
-    margin: 50px;
+  width: 200px;
+    margin: 35px;
 }
 .text h3{
     font-size: 1.4rem;
@@ -296,6 +335,140 @@ color: #ffffff;
 }
 #mail{
 padding: 20px;
+}
+.box-container{
+flex: 50%;
+margin-left: 10%;
+
+}
+.polje{
+  min-height: 60px;
+  width: 70%;
+  text-align: center;
+}
+form h2{
+  margin-bottom: 10px;
+}
+
+.polje input{
+  font-size: 1rem;
+  color: #ffffff;
+  padding: 5px;
+  border: none;
+  height: 30px;
+  
+}
+
+.polje input[type=text], select {
+  border: none;
+  border-bottom: 2px solid var(--siva);
+  background-color: inherit;
+  background-color:#5b5550d2;
+  display: block;
+  width: 100%;
+
+  margin: none;
+}
+.polje input[type=email], select{
+  border: none;
+  border-bottom: 2px solid var(--siva);
+  background-color: inherit;
+  background-color:#5b5550d2;
+  display: block;
+  width: 100%;
+  margin: none;
+}
+
+.polje:focus , select{
+border: hidden;
+}
+.polje textarea{
+  resize: none;
+}
+.polje textarea, select{
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  height: 150px;
+  width: 100% ;
+  margin-top: 20px;
+  background-color:#5b5550d2;
+  border-bottom: var(--siva)solid 3px;
+  padding: 5px;
+}
+.polje .line {
+  height: 3px;
+  width: 0px;
+  position: absolute;
+  background-color: var(--yellow);
+  display: inline-block;
+  transition: .6s width ease-in-out;
+  position: relative;
+  top: -13px;
+}
+.polje .line-t{
+  top: -17px;
+}
+
+.polje input[type=text]:focus, select:focus {
+  outline: none;
+}
+.polje input[type=text]:focus+.line, select:focus+.line {
+  width: 101.5%;
+  border: hide;
+  background-color: var(--yellow);
+}
+.polje input[type=email]:focus, select:focus {
+  outline: none;
+}
+.polje input[type=email]:focus+.line, select:focus+.line {
+  width: 101.5%;
+  border: hidden;
+  background-color: var(--yellow);
+}
+.polje textarea:focus+.line,select:focus+.line{
+  width: 101.5%;
+  
+  top: -18px;
+  border: hidden;
+  background-color: var(--yellow);
+}
+.polje textarea:focus+.line,select:focus{
+  outline: none;
+}
+
+.gumb input{
+  border: none;
+  margin:10px 30%;
+  width: 85px;
+  height: 45px;
+  background-color: var(--siva);
+  font-weight: 800;
+  font-family: Helvetica;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: .4s all;
+}
+.gumb input:hover{
+  background-color: var(--yellow);
+  scale: 1.1;
+}
+@media (max-width:1000px) {
+  .contact-container{
+    flex-direction: column;
+  }
+  .info-container{
+    width: 90%;
+    border: red solid 2px;
+  }
+  .box{
+    padding:auto;
+   }
+   .box-container{
+    margin-left: 20%;
+    
+    }
 }
 /*-----------------------------noga-----------------------------------------*/
 

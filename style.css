@@ -4,22 +4,23 @@
     --rj:#2e2925;
     --rob_card: 20px;
 }
-
+html {
+	scroll-behavior: smooth;
+}
 *{
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
 }
 ul{
     list-style-type: none;
 }
 h1{
-    font-size: 44px;
+    font-size: 2.5rem;
     font-family: 'Times New Roman', Times, serif;
     color: var(--yellow);
 }
 h2{
-        font-size: 27px;
+        font-size: 1.5;
         font-family: 'Times New Roman', Times, serif;
         color: var(--yellow);
 }
@@ -29,7 +30,7 @@ a{
 p{
     color: #ffffff;
     font-family: Helvetica,sans-serif ;
-    font-size: 17px;
+    font-size: 1.1rem;
     letter-spacing: 1px;
 }
 
@@ -41,7 +42,7 @@ header{
   top: 0;
   left: 0;
   padding-top: 0;
-  background-color: #2e2925f0;
+  background-color: var(--rj);
   border-end-end-radius: 200%;
   border-end-start-radius: 200%;
   height: 110px;
@@ -61,7 +62,7 @@ header{
   margin-right:auto;
   margin-left:auto;
   justify-content: center;
-  display: flex;
+  /*display: flex;*/
   transition: all 0.5s linear;  
  
 }
@@ -69,10 +70,9 @@ header{
   text-align: center;
   height: 100%;
    width: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  float:none;
-  transition: all 0.5s linear;  
+  margin-top: 15px;
+ position: relative;
+  transition: all 0.5s linear; 
 }
 
 .link{
@@ -81,7 +81,6 @@ header{
   font-weight: 700;
   margin-left: 10px;
   margin-right: 10px;
-  margin-top:-5% ;
   /* margin: 0% 15px;*/
   padding: 13px;
    text-transform: uppercase;
@@ -90,8 +89,7 @@ header{
    border: solid rgba(255, 255, 255, 0) 0px;
    border-radius: 25px;
    transition:  0.5s linear;
-   position: relative;
-      
+   
 }
 
 #povezave li:nth-child(4), #povezave li:nth-child(5), #povezave li:nth-child(6)
@@ -115,8 +113,8 @@ header{
 }
 #nav{
 display: flex;
-height: 110px;
-padding-top: 15px;
+height: 100px;
+padding-top: 20px;
 margin-left: auto;
 margin-right: auto;
 justify-content: center;
@@ -151,6 +149,37 @@ color: #ffffff;
   position: relative;
 }
 /*--------------------------------------1-del strani------------------------------*/
+
+.scrollLink {
+	position: fixed;
+	top: 50%;
+	right: 50px;
+	display: none; /*v js imaš inline-flex če nedela spremeni nazaj*/
+	align-items: center;
+	justify-content: center;
+	background-color: var(--yellow);
+	border-radius: 2rem;
+	padding: 0.5rem;
+	text-decoration: none;
+	transition: 0.2s ease-out;
+  z-index: 2;
+
+}
+.scrollLink span {
+  color: black;
+	font-size: 2.5rem;
+	transition: 0.2s ease-out;
+}
+
+.scrollLink:hover {
+	background-color:#d3910e;
+}
+.scrollLink:hover span {
+	transform: translateY(-4px);
+  color: var(--siva);
+}
+
+
 .bgimg1{
     margin: 0;
     width: 100%;
@@ -188,10 +217,14 @@ color: #ffffff;
 }
 .main-container h1{
     color: var(--yellow);
-    font-size: 70px;
+    font-size: 4.5rem;
     letter-spacing: 1px;
     line-height: 95%;
     margin-bottom: 40px;
+}
+.main-container p{
+  font-size: 1.35rem;
+  font-weight: 550;
 }
 
 /*-------------------------------------2 del------------------------------*/
@@ -227,16 +260,19 @@ color: #ffffff;
 }
 #vsebina{
     margin: auto;
-    padding: 14% 5% 14% 5%;
-  
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 .us-box{
-    float: left; 
-    width: 50%;
+    /*float: left; */
+    margin-top: 18%;
+    width: 50%;  /*50*/
+    max-width: 800px;
     padding: 0 5% 0 4%;   
 }
 .us-box h1 {
-    width: 40%;
+    width: 55%;   /*55*/  
     color: var(--yellow);
     word-spacing: 7px;
     letter-spacing: 1px;
@@ -263,14 +299,16 @@ color: #ffffff;
 }
 /*------------------------------------------2-slike--------------------------------*/
 .container1{
-   float: left; 
-   width: 30%;
-  margin-top: -30%; 
-  margin-left: 55%;
-  margin-right: 5%;
+  margin-top: 6%; 
+}
+.container1 img:nth-child(1){
+  width: 30rem;
+}
+.container1 img:nth-child(2){
+  width: 35rem;
 }
 .container1 :nth-child(1){
-    width: 25%;
+    max-width: 100%;
     margin-top: 0px;
     margin-left: 0px;
     border-radius: 20px;
@@ -279,8 +317,8 @@ color: #ffffff;
     position:absolute;
 }
 .container1 :nth-child(2){
-    width: 30%;
-    margin-top: 15%;
+    max-width: 100%;
+    margin-top: 280px;
     margin-left: 8%;
     border-radius: 20px;
     z-index: 2;
@@ -300,8 +338,10 @@ color: #ffffff;
     background-repeat: no-repeat;
     background-position: center center;
     background-image: url(img/brune/slika3.0.jpg);
-    background-size: cover;
+    background-size:101%;
     position: relative;
+  
+
 }
 .container2::after{
     content: "";
@@ -317,6 +357,7 @@ color: #ffffff;
     z-index: -1;
     position: absolute;
 }
+
 #vsebina1{
     height: 100vh;
     margin: 4%;
@@ -324,17 +365,18 @@ color: #ffffff;
 
 }
 .container_card{
-    width: 1200px;
+    max-width: 1200px;
     position: relative;
     margin: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap:wrap;
     
   }
   
   .container_card .card{
     position: relative;
+    margin: 0 2% ;
   }
   
   .container_card .card .face{
@@ -403,14 +445,13 @@ color: #ffffff;
   }
   
   .container_card .card .face.face2{
-     position: relative;
-     
+     position: relative; 
      display: flex;
      border-bottom-right-radius: var(--rob_card);
      border-bottom-left-radius: var(--rob_card);
      align-items: center;
      justify-content: center;
-     padding: 20px;
+     padding: 15px;
     box-sizing: border-box;
     box-shadow: 0 20px 50px rgba(0,0,0,.8);
     transform: translateY(-100px);
@@ -422,9 +463,9 @@ color: #ffffff;
   
   
   }
-  
+
   .container_card .card .face.face2 .content p, a{
-    font-size: 15px;
+    font-size: 1rem;
     margin: 0 ;
     padding: 0;
     color:#333;
@@ -455,6 +496,36 @@ color: #ffffff;
   }
 
   /*---------------------------------4-DEL---------------------------------*/
+  .container-ponudba{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('img/les_letnice.png');
+    background-size: cover;
+    height: 120vh;
+    position: relative;
+}
+.container-ponudba::after{
+    content: "";
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: linear-gradient(0deg, #2e292526 30%, #2E2925 100%), linear-gradient(180deg,#2e292526 30%, #2e2925 100%);
+    background-size: cover;
+    height: 120vh;
+    z-index: -1;
+    position: absolute;
+}
   .ponudba{
     padding-top: 1%;
   }
@@ -472,29 +543,24 @@ color: #ffffff;
     justify-content: center;
   }
   .ikone ul{
-    width: 1500px;
+    max-width: 1500px;
     margin: 0;
     padding: 0;
     display: flex;
-   
    text-align: center;
+   flex-flow: wrap;
+   margin-right: 12%;
+   margin-left: 12%;  
+   justify-content: space-between;
   }
-  .ikone ul hr{
-    width: 100%;
-    display: none;
+  .ikone ul li{
+    margin: 3%;
+    
   }
-
-  .ikone ul{
-    max-width: 1400px;
-    flex-flow: wrap;
-    margin-right: 22%;
-    margin-left: 22%;  
-    justify-content: space-between;
-  }
-
 
   .ikone ul li a img{
     width: 250px;
+    height: 250px;
     margin-top: 15%;
     margin-left: auto;
     margin-right: auto;
@@ -509,9 +575,9 @@ color: #ffffff;
     scale: 1.07;
   }
   .ikone ul li h2{
-   margin-top: 7%;
-   margin-left: auto;
-    font-size: 22px;
+    margin-top: 7%;
+    margin-left: auto;
+    font-size: 1.5rem;
     text-transform: uppercase;
     text-shadow: 2px 2px #000000;
     transition: .3s ease-in-out;
@@ -523,7 +589,7 @@ color: #ffffff;
     margin-left: auto;
     padding-top: 5%;
     color: var(--siva);
-    font-size: 95%;
+    font-size: 1rem;
   }
   /*--------------------noga----------------------------*/
  .container3{
@@ -611,6 +677,387 @@ color: #ffffff;
     color:var(--siva);
     font-size: 90%;
   }
+/*---------------------------------------------------------------*/
+.nav-mobile {
+  display: none;
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--rj);
+  z-index: 3;
+}
+@media only screen and (max-width: 1000px) {
 
+  .nav-mobile {
+    display: block;
+  }
+  
+  .nav-pages {
+    width: 100%;
+    padding: 0 ;   
+  }  
+  .nav-pages ul {
+    display: none;
+    left: 0;
+
+    padding-left: 25%;
+  }
+  
+   .nav-pages ul li a {
+    padding: 15px;
+    line-height: 20px; 
+  }
+  .link{
+    display: block;
+    width: 50%;
+   
+  }
+  #ozadje{
+    background-color: var(--rj);
+    position: absolute;
+    width: 100%;
+    transition: 1s linear;
+  }
+}
+@media screen and (min-width: 1000px) {
+  #povezave {
+    display: flex !important; } }
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0; }
+  #nav-toggle span,
+  #nav-toggle span:before,
+  #nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 4px;
+    width: 30px;
+    background: white;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 300ms ease-in-out; }
+  #nav-toggle span:before {
+    top: -10px; }
+  #nav-toggle span:after {
+    bottom: -10px; }
+  #nav-toggle.active span {
+    background-color: transparent; }
+    #nav-toggle.active span:before, #nav-toggle.active span:after {
+      top: 0; }
+    #nav-toggle.active span:before {
+      transform: rotate(45deg); }
+    #nav-toggle.active span:after {
+      transform: rotate(-45deg); }
+
+
+  @media (max-width:1700px) {
+    .container2{
+      background-size:120%;
+     
+  }
+  /*-------------2-slike----------------*/
+  .container1{
+    margin-top: 12%;
+  }
+  .container1 img:nth-child(1){
+    width: 25rem;
+  }
+  .container1 img:nth-child(2){
+    width: 29rem;
+  }
+  .container1 :nth-child(2){
+      margin-top: 230px;
+  }
+  }
+
+  @media (max-width:1450px) {
+  /*----------------------2-slike----------------*/
+  #vsebina{
+    margin-top: 5%;
+}
+  .container1{
+    margin-top: 18%;
+  }
+  .container1 img:nth-child(1){
+    width: 20rem;
+  }
+  .container1 img:nth-child(2){
+    width: 24rem;
+  }
+  .container1 :nth-child(2){
+      margin-top: 190px;
+  }
+  /*------------------scrol slika----------------*/
+    .container2{
+      background-size:145%;
+     
+  }
+  }
+  @media (max-width:1250px) {
+     /*----------------------2-slike----------------*/
+  .container1{
+    margin-top: 23%;
+  }
+  .container1 img:nth-child(1){
+    width: 17rem;
+  }
+  .container1 img:nth-child(2){
+    width: 20rem;
+  }
+  .container1 :nth-child(2){
+      margin-top: 170px;
+  }
+  /*---------------------------------------------------*/
+    .container2{
+      background-size:cover;
+     height: 140vh;
+  }
+  .container2::after{
+    height: 140vh;
+  }
+  }
+  @media (max-width:1100px) {
+    header{
+      border-end-end-radius: 0%;
+      border-end-start-radius: 0%;
+    }
+    #nav{
+      height: 100px;
+    }
+    #povezave li{
+      margin-top: 16px;
+    }
+    #logo{
+      width: 220px;
+      padding-top: 5px;
+      margin-bottom: 5px;
+     transition: all 0.5s linear;
+     position: absolute;
+    }
+    #logo img{
+      width: 85%;
+    margin-left: 30px;
+    }
+    .link{
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 16px;
+      font-weight: 700;
+      margin-left: 10px;
+      margin-right: 10px;
+      /* margin: 0% 15px;*/
+      padding: 13px;
+       text-transform: uppercase;
+       text-decoration: none;
+       color: #ffffff;
+       border: solid rgba(255, 255, 255, 0) 0px;
+       border-radius: 25px;
+       transition:  0.5s linear;
+       
+    }
+    
+    /*------------naslovni del-----------------*/
+    #main-box{
+        padding-left: 13%;
+        padding-right: 13%;
+        padding-top: 18%;
+    }
+    .main-container h1{
+        font-size: 3.8rem;
+        margin-bottom: 30px;
+    }
+    .main-container p{
+      font-size: 1.2rem;
+    }
+}
+  @media (max-width:1000px) {
+    h1{
+      font-size: 2rem;
+  }
+  #logo img{
+    width: 70%;
+    padding-top: 5%;
+  }
+  /*------------naslovni del-----------------*/
+  #main-box{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 25%;
+}
+.main-container h1{
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+}
+.main-container p{
+  font-size: 1.125rem;
+}
+  /*------------dobrodošli text in 2-slike-----------------*/
+  #vsebina{
+  flex-direction: column;
+   margin-top: -5%;
+ }
+ .us-box{
+  width: 80%;
+  font-size: 0.9rem;
+ }
+ .us-box p{
+  font-size: .95rem;
+ }
+ .container1{
+  margin-top: 10%;
+  margin-left: 10%;
+}
+.container1 img:nth-child(1){
+  width: 22rem;
+}
+.container1 img:nth-child(2){
+  width: 26rem;
+  margin-top: 70px;
+  margin-left: 270px;
+}
+  /*------------naša ponudba-------------------*/
+  .ikone ul li h2{
+      font-size: 1.3rem;
+   }
+
+   .ikone ul li p{
+    font-size: 0.9rem;
+   }
+  /*------------postopek izdelave--------------*/
+    .container2{
+      background-size:220%;
+      height: 110vh;
+     
+  }
+  .container2::after{
+    height: 110vh;
+  }
+
+  .container_card .card .face{
+    width:280px;
+    height: 150px;        /*pazi + translateY*/
+    
+  }
+  .container_card .card .face.face1{
+    transform: translateY(75px);   /*pazi + translateY*/
+  }
+  .container_card .card .face.face1 .content i{
+    font-size: 3.6em;
+  }
+
+  .container_card .card .face.face1 .content h3{
+    font-size: 1.25em;
+  }
+  .container_card .card .face.face2 .content p, a{
+    font-size: .8rem;
+  
+  }
+  .container_card .card .face.face2{
+    position: relative; 
+    display: flex;
+    border-bottom-right-radius: var(--rob_card);
+    border-bottom-left-radius: var(--rob_card);
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+   box-sizing: border-box;
+   box-shadow: 0 20px 50px rgba(0,0,0,.8);
+   transform: translateY(-75px);
+  }
+  /*------------veličina skok na vrh puščice--------------*/
+  .scrollLink span {
+    font-size: 2rem;
+  }
+  }
+
+  /*------------------------------------------------------------------------------------*/
  
-
+  @media (max-width:818px)
+  {
+      /*------------naslovni del-----------------*/
+    #main-box{
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 35%;
+  }
+  .main-container h1{
+      font-size: 3rem;
+      margin-bottom: 25px;
+  }
+  .main-container p{
+    font-size: 1.1rem;
+  }
+    /*------------dobrodošli text in 2-slike-----------------*/
+  #vsebina{
+   margin-top: 5%;
+   align-items: center;
+ }
+ .container1{
+  margin-top: 14%;
+  margin-left: -640px;
+}
+.container1 img:nth-child(1){
+  width: 19rem;
+}
+.container1 img:nth-child(2){
+  width: 23rem;
+  margin-top: 70px;
+  margin-left: 270px;
+}
+/*-----------------------------------karte------------------------------*/
+    .container2{
+      background-size:273%;
+      height: 110vh;
+     
+  }
+  .scrollLink{
+    z-index: -3;
+  }
+  }
+  @media (max-width:661px)
+  {
+         /*------------naslovni del-----------------*/
+     #main-box{
+            padding-left: 3%;
+            padding-right: 3%;
+            padding-top: 50%;
+      }
+     .main-container h1{
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+     }
+    .main-container p{
+          font-size: 1.05rem;
+      }
+ /*------------dobrodošli text in 2-slike-----------------*/
+  #vsebina{
+    margin-top: 5%;
+    align-items: center;
+  }
+  .container1{
+   margin-top: 14%;
+   margin-left: -480px;
+ }
+ .container1 img:nth-child(1){
+   width: 15rem;
+ }
+ .container1 img:nth-child(2){
+   width: 18rem;
+   margin-top: 70px;
+   margin-left: 210px;
+ }
+/*-----------------------------------karte------------------------------*/
+    .container2{
+      background-size:cover;
+      height: 170vh;
+     
+  }
+  .container2::after{
+    height: 170vh;
+  }
+  }

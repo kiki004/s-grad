@@ -3,38 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script> 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet"> <!--puščica gor-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!--animacije-->
     <title>S-grad</title>
 
 </head>
 <body>
-    
-        <section>
+<!-------------  animacije: https://github.com/michalsnik/aos#animations  -------------->
+        <section id="top">
             <header id="nav">
             <div id="logo">
                 <a href="index.html"><img src="img/logobel.svg" alt="logo"></a>
             </div>
+           
             <div class="nav-pages">
+              <div class="nav-mobile"><a id="nav-toggle" href="#!">
+                <span></span></a></div>
+                <div id="ozadje">
                 <ul id="povezave">
                   <li><a href="index.html"class="link selected">Domov</a></li>
                   <li><a href="podstrani/onas.html"class="link ">O nas</a></li>
                   <li><a href="podstrani/tehnologija.html"class="link ">tehnologija</a></li>
                   <li><a href="podstrani/galerija.html"class="link">Galerija</a></li>
                   <li><a href="podstrani/izdelki.html"class="link ">Izdelki</a></li>           
-                  <li><a href="#"class="link">Kontakt</a></li>
+                  <li><a href="podstrani/kontakt.html"class="link">Kontakt</a></li>
                 </ul>
             </div>
-            </header>
-        </section> 
+          </div>
+        </header>
+     </section> 
 
         <div class="bgimg1">
             <section id="main-box">
                 <div class="main-container">
-                    <h1>Your Dream Home and Furnishings Under One Roof</h1>
-                     <p style="font-size: 20px;font-weight: 550;">From the foundation to the furnishings, we are committed to excellence. 
-                        Our homes are built with care, furnished with style, and filled with love.</p>
+                    <h1 data-aos="fade-right"data-aos-duration="1000"data-aos-delay="150">Vaš sanjski dom in oprema pod eno streho</h1>
+                     <p data-aos="fade-left"data-aos-duration="1000"data-aos-delay="150">Od temeljev do opreme smo zavezani k odličnosti. Naši domovi so zgrajeni skrbno, opremljeni s stilom in napolnjeni z ljubeznijo.</p>
                 </div>
             </section>
         </div>
@@ -42,24 +48,24 @@
         <div class="container">  
             <section id="vsebina">   
                 <div class="us-box">       
-                    <h1>Dobrodošli v našem svetu lesenih hiš</h1>      
-                    <p>Naše hiše so izdelane z največjo skrbnostjo, uporabljamo trajnostne materiale in inovativne oblikovalske rešitve, 
-                         da vam zagotovimo bivalni prostor, ki je tako okolju prijazen kot estetsko privlačen.</p> <p> Doživite toplino lesa, čar rustikalne elegance in udobje doma.
+                    <h1 data-aos="fade-right" data-aos-duration="800"data-aos-offset="200">Dobrodošli v našem svetu lesenih hiš</h1>      
+                    <p data-aos="fade-right" data-aos-duration="800"data-aos-offset="200">Naše hiše so izdelane z največjo skrbnostjo, uporabljamo trajnostne materiale in inovativne oblikovalske rešitve, 
+                         da vam zagotovimo bivalni prostor, ki je tako okolju prijazen kot estetsko privlačen.</p> <p data-aos="fade-right" data-aos-duration="700"data-aos-offset="200"> Doživite toplino lesa, čar rustikalne elegance in udobje doma.
                          Vsaka naša lesena hiša je dokaz naše zavezanosti kakovosti, trajnosti in okolju. Vabimo vas, da raziščete našo zbirko in odkrijete popolno leseno hišo zase. Dobrodošli doma.</p>              
                 </div>
 
                 <div class="container1">
-                    <img src="img/montazne/montazna_w.jpg" alt="slika1">
-                    <img src="img/brune/slika2.0000.jpg" alt="slika2">
+                    <img data-aos="fade-left" data-aos-duration="800"data-aos-offset="240"src="img/montazne/montazna_w.jpg" alt="slika1">
+                    <img data-aos="fade-left" data-aos-duration="800"data-aos-offset="240"src="img/brune/slika2.0000.jpg" alt="slika2">
                 </div>
             </section>
         </div>
-<!----------------3del------------------------------->
+<!----------------3del-------------------------------> 
         <div class="container2" id="animacija">
             <section id="vsebina1">
                 <div class="container_card">
                     <!--------------svetujemo---------------->
-                    <div class="card">
+                    <div data-aos="fade-up" data-aos-offset="250" data-aos-duration="800" class="card">
                       <div class="face face1">
                         <div class="content">
                            <i class="material-symbols-outlined">groups</i>            
@@ -69,12 +75,12 @@
                       <div class="face face2">
                         <div class="content">
                           <p> Naša ekipa strokovnjakov je vedno na voljo za svetovanje in pomoč pri izbiri najboljše montažne hiše, ki ustreza vašim potrebam in željam. Skupaj bomo preučili vse možnosti in vam pomagali pri odločitvi.</p>
-                          <a href="#" type="button">Read More</a>
+                         <!--  <a href="#" type="button">Read More</a>    Če bom kdaj potreboval -->
                         </div>
                       </div>
                    </div>
                    <!--------------Projektiramo---------------->
-                   <div class="card">
+                   <div data-aos="fade-up" data-aos-offset="250"  data-aos-duration="800" class="card">
                       <div class="face face1">
                         <div class="content">
                             <i class="material-symbols-outlined">design_services</i>             
@@ -84,12 +90,12 @@
                       <div class="face face2">
                         <div class="content">
                           <p>Našo sodelovanje z izkušenimi arhitekti in našimi inženirji, ki Vam bodo skrbno načrtovali vašo montažno hišo, pri čemer bodo upoštevali vaše specifične potrebe in želje. Tukaj pripravimo tudi vizualni predogled hiše.</p>
-                          <a href="#" type="button">Read More</a>
+                          <!--  <a href="#" type="button">Read More</a>  Če bom kdaj potreboval -->
                         </div>
                       </div>
                    </div>
                    <!--------------Izdelampo---------------->
-                   <div class="card">
+                   <div data-aos="fade-up" data-aos-offset="250"  data-aos-duration="800" class="card">
                       <div class="face face1">
                         <div class="content">
                           <i class="material-symbols-outlined">construction</i>
@@ -99,12 +105,12 @@
                       <div class="face face2">
                         <div class="content">
                           <p> Vašo montažno hišo bomo izdelali v naših sodobnih proizvodnih obratih z uporabo najkakovostnejših materialov in strokovnega znanja. Vsaka hiša je izdelana po meri in z največjo natančnostjo.</p>
-                          <a href="#" type="button">Read More</a>
+                           <!--  <a href="#" type="button">Read More</a>  Če bom kdaj potreboval -->
                         </div>
                       </div>
                    </div>
                 <!--------------Postavimo---------------->
-                   <div class="card">
+                   <div data-aos="fade-up" data-aos-offset="250" data-aos-duration="800" class="card">
                     <div class="face face1">
                       <div class="content">
                         <i class="material-symbols-outlined">house_siding</i>
@@ -114,12 +120,12 @@
                     <div class="face face2">
                       <div class="content">
                         <p>Naša ekipa strokovnjakov bo vašo montažno hišo postavila na izbrani lokaciji. Postopek postavitve je hiter in učinkovit, kar minimizira morebitne motnje.</p>
-                        <a href="#" type="button">Read More</a>
+                         <!--  <a href="#" type="button">Read More</a>  Če bom kdaj potreboval -->
                       </div>
                     </div>
                  </div>
                 <!--------------Opremimo---------------->
-                 <div class="card">
+                 <div data-aos="fade-up" data-aos-offset="250"  data-aos-duration="800" class="card">
                     <div class="face face1">
                       <div class="content">
                         <i class="material-symbols-outlined">real_estate_agent</i>
@@ -129,12 +135,12 @@
                     <div class="face face2">
                       <div class="content">
                         <p> Po postavitvi hiše lahko poskrbimo tudi za njeno notranjo opremo. Izberete lahko med različnimi stili in dizajni, ki ustrezajo vašemu okusu in življenjskemu slogu.</p>
-                        <a href="#" type="button">Read More</a>
+                         <!--  <a href="#" type="button">Read More</a>  Če bom kdaj potreboval -->
                       </div>
                     </div>
                  </div>
                  <!--------------Garantiramo---------------->
-                 <div class="card">
+                 <div data-aos="fade-up" data-aos-offset="250"  data-aos-duration="800" class="card">
                     <div class="face face1">
                       <div class="content">
                         <i class="material-symbols-outlined">fact_check</i>
@@ -144,7 +150,7 @@
                     <div class="face face2">
                       <div class="content">
                         <p> Zagotavljamo visoko kakovost naših izdelkov in stojimo za svojim delom. Naše stranke so naše največje bogastvo, zato smo zavezani k zagotavljanju izjemne storitve in podpore.</p>
-                        <a href="#" type="button">Read More</a>
+                         <!--  <a href="#" type="button">Read More</a>  Če bom kdaj potreboval -->
                       </div>
                     </div>
                  </div>
@@ -152,35 +158,35 @@
             </section>
         </div>
 <!--------------------4-DEL----------------------------------->
-<div class="container">  
+<div class="container-ponudba">  
     <section id="vsebina1">   
         <div class="ponudba">
             <h1>Naša ponudba</h1>
         </div>
         <div class="ikone">
             <ul>
-                <li><a href="#"><img src="img/montazne/icon_montazna.jpg" alt="Montazne hiše"></a>
+                <li data-aos="fade-up" data-aos-duration="600"data-aos-offset="250"><a href="/podstrani/galerija.html"><img src="img/montazne/icon_montazna.jpg" alt="Montazne hiše"></a>
                     <h2>Montazne hiše</h2>
                     <p>Izdelujemo montažne hiše po vaših željah.</p>
                 </li>
-                <li><a href="#"><img src="img/brune/icon_brune.png" alt="Hiše iz brun"></a>
+                <li data-aos="fade-up" data-aos-duration="600"data-aos-offset="250"><a href="#"><img src="img/brune/icon_brune.png" alt="Hiše iz brun"></a>
                     <h2>Hiše iz brun</h2>
                     <p>Izdelujemo hiše iz brun (brunarice) po vaših željah.</p>
                 </li>
-                <li><a href="#"><img src="img/brune/icon_brune.png" alt="Hiše iz brun"></a>
+                <li data-aos="fade-up" data-aos-duration="600"data-aos-offset="250"><a href="#"><img src="img/brune/icon_brune.png" alt="Hiše iz brun"></a>
                     <h2>Strehe</h2>
                     <p>Izdelujemo tesarska dela in ostrešja po meri</p>
                 </li>
-                <hr>  <!-----------------------prelom--------------------------->
-                <li><a href="#"><img src="img/pohištvo/icon_stop.JPG" alt="Stavbno pohištvo"></a>
+                 <!-----------------------prelom--------------------------->
+                <li data-aos="fade-up" data-aos-duration="600"data-aos-offset="250"><a href="#"><img src="img/stavbno-pohištvo/stopnice-led.JPG "alt="Stavbno pohištvo"></a>
                     <h2>Stavbno pohištvo</h2>
                     <p>Izdelujemo stavbno pohištvo kot so stopnice, ograje, okna in vrata.</p>
                 </li>
-                <li><a href="#"><img src="img/pohistvo/icon_poh.JPG" alt="Pohištvo"></a>
+                <li data-aos="fade-up" data-aos-duration="600"data-aos-offset="250"><a href="#"><img src="img/pohistvo/icon_poh.JPG" alt="Pohištvo"></a>
                     <h2>Pohištvo</h2>
                     <p>Izdelujemo pohištvo po vaših željah</p>
                 </li>
-                <li><a href="#"><img src="img/pohistvo/icon_poh.JPG" alt="Pohištvo"></a>
+                <li data-aos="fade-up" data-aos-duration="600"data-aos-offset="250"><a href="#"><img src="img/pohistvo/icon_poh.JPG" alt="Pohištvo"></a>
                     <h2>ostalo</h2>
                     <p>Izdelujemo objekte po vaših željah (nadstreške, gospodarske objekte, hleve...)</p>
                 </li>
@@ -226,7 +232,42 @@
         </div>
     </div>
 </div>  
+<a data-aos="fade-up" data-aos-duration="600"data-aos-offset="250" href="#top" class="scrollLink">
+  <span class="material-icons">arrow_upward</span>
+</a>
 <script src="script.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+
+AOS.init({
+        easing: 'ease-in-out-sine'
+      });
+
+      setInterval(addItem, 300);
+
+      var itemsCounter = 1;
+      var container = document.getElementById('aos-demo');
+
+      function addItem () {
+        if (itemsCounter > 42) return;
+        var item = document.createElement('div');
+        item.classList.add('aos-item');
+        item.setAttribute('data-aos', 'fade-up');
+       // item.innerHTML = '<div class="aos-item__inner"><h3>' + itemsCounter + '</h3></div>';
+        container.appendChild(item);
+        itemsCounter++;
+      }
+    
+//menu za telefon
+$('#nav-toggle').on('click', function() {
+  this.classList.toggle('active');
+});
+
+$("#nav-toggle").click(function() {
+      $("#povezave").toggle();
+    });
+
+</script>
 </body>
 </html>
 

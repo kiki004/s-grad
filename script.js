@@ -1,34 +1,58 @@
+  
 window.onscroll = function() {scrollFunction()};
 
 const linki = document.getElementsByClassName("link");
 
+  //scrolanje na vrh
+  $(document).ready(function() {
+    $("a.scrollLink").click(function(event) {
+        event.preventDefault();
+        $("html, body").animate({
+            scrollTop: $($(this).attr("href")).offset().top
+          }, 500);
+      });
+  });
+//-----------------------
+
 function scrollFunction(){
-    if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
-        document.getElementById("nav").style.height ="70px";
-        document.getElementById("nav").style.paddingTop ="5px";
-        document.getElementById("povezave").style.paddingTop ="0px";
-        document.getElementById("logo").style.width ="160px";
-        document.getElementsByClassName("nav-pages")[0].style.maxWidth ="1200px"
-        for(let i=0; i<linki.length; i++){
-            linki[i].style.fontSize ="80%";
-            linki[i].style.marginLeft ="15px";
-            linki[i].style.marginRight ="15px";
-            linki[i].style.padding ="10px";
+    if(window.innerWidth > 1100){
+        if(document.bodyscrollTop > 800 || document.documentElement.scrollTop > 800 ){
+            document.getElementsByClassName("scrollLink")[0].style.display ="inline-flex"
+            document.getElementsByClassName("scrollLink")[0].style.opacity ="1"
         }
-
+        else{
+            document.getElementsByClassName("scrollLink")[0].style.display ="none"
+            document.getElementsByClassName("scrollLink")[0].style.opacity ="0"
+        }
+        if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
+            document.getElementById("nav").style.height ="70px";
+            document.getElementById("nav").style.paddingTop ="5px";
+            document.getElementById("povezave").style.paddingTop ="0px";
+            document.getElementById("logo").style.width ="160px";
+            document.getElementsByClassName("nav-pages")[0].style.display ="hide"
+            for(let i=0; i<linki.length; i++){
+                linki[i].style.fontSize ="80%";
+                linki[i].style.marginLeft ="15px";
+                linki[i].style.marginRight ="15px";
+                linki[i].style.padding ="9px";
+            }
+    
+        }
+        else{
+            document.getElementById("nav").style.height ="100px";
+            document.getElementById("nav").style.paddingTop ="20px";
+            document.getElementById("povezave").style.paddingTop ="5px";
+            document.getElementById("logo").style.width ="220px";
+            document.getElementsByClassName("nav-pages")[0].style.maxWidth ="1400px"
+            for(let i=0; i<linki.length; i++){
+                linki[i].style.fontSize ="100%";
+                linki[i].style.marginLeft ="10px";
+                linki[i].style.marginRight ="10px";
+                linki[i].style.padding ="13px";
+             
+            }
     }
-    else{
-        document.getElementById("nav").style.height ="110px";
-        document.getElementById("nav").style.paddingTop ="15px";
-        document.getElementById("povezave").style.paddingTop ="5px";
-        document.getElementById("logo").style.width ="220px";
-        document.getElementsByClassName("nav-pages")[0].style.maxWidth ="1400px"
-        for(let i=0; i<linki.length; i++){
-            linki[i].style.fontSize ="100%";
-            linki[i].style.marginLeft ="10px";
-            linki[i].style.marginRight ="10px";
-            linki[i].style.padding ="13px";
-
+    
             const initSlider = () => {
     const imageList = document.querySelector(".slider-wrapper .image-list");
     const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
@@ -100,13 +124,14 @@ window.addEventListener("load", initSlider);
         }  
         
 }
-}
+
 
 const animacija = document.getElementById("animacija");
 
+//-------------------------------------------slika se v ozadju počasneje scrola-------------------------------------------------
 window.addEventListener("scroll", function(){
-   let odmik = window.pageYOffset - 2100 ;
-   animacija.style.backgroundPositionY = odmik*0.5 + "px";
+   let odmik = window.pageYOffset - 1970 ;
+   animacija.style.backgroundPositionY = odmik*0.3 + "px";
 })
 
 const initSlider = () => {

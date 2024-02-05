@@ -6,6 +6,9 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../stil/izdelki.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet"> <!--puščica gor-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!--animacije-->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script> 
     <title>S-grad</title>
 
 </head>
@@ -21,32 +24,32 @@
                     <li><a href="../index.html"class="link">Domov</a></li>
                     <li><a href="onas.html"class="link ">O nas</a></li>
                     <li><a href="tehnologija.html"class="link ">tehnologija</a></li>
-                    <li><a href="#"class="link">Galerija</a></li>
+                    <li><a href="galerija.html"class="link">Galerija</a></li>
                     <li><a href="izdelki.html"class="link selected">Izdelki</a></li>           
-                    <li><a href="#"class="link">Kontakt</a></li>
+                    <li><a href="kontakt.html"class="link">Kontakt</a></li>
                 </ul>
             </div>
      </header>
      <!-----------------------------1.DEL--------------------------------------------------------------->
          <div class="container"> 
-            <div class="naslov">
+            <div class="naslov"data-aos="fade-up" data-aos-duration="500"data-aos-offset="150"data-aos-delay="100">
                 <h1>Nekaj projektov</h1>
             </div> 
             <section id="vsebina1">   
               
-                <div class="projekti">   
+                <div class="projekti"data-aos="fade-left" data-aos-duration="800"data-aos-offset="150"data-aos-delay="200">   
                     <a href="bruna3d.html">
                         <img src="../img/brune/slika2.0000.jpg" alt="bruna">
                         <p>Gozdna brunarica</p>
                     </a>
                 </div>  
-                <div class="projekti">   
+                <div class="projekti" data-aos="fade-left" data-aos-duration="800"data-aos-offset="150"data-aos-delay="450">   
                     <a href="cerk-vrata.html">
-                        <img src="../img/stavbno pohištvo/vrata_icon.jpg" alt="vrata">
+                        <img src="../img/stavbno-pohištvo/vrata_icon.jpg" alt="vrata">
                         <p>Cerkvena vrata</p>
                     </a>
                 </div>              
-                <div class="projekti">   
+                <div class="projekti" data-aos="fade-left" data-aos-duration="800"data-aos-offset="150"data-aos-delay="700">   
                     <a href="mont_hisa.html">
                         <img src="../img/montazne/gopro2.jpg" alt="montažna hiška">
                         <p>Montažna hiška</p>
@@ -94,6 +97,28 @@
             </div>
         </div>
     </div>
-</div>  
+</div> 
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script>
+AOS.init({
+        easing: 'ease-in-out-sine'
+      });
+
+      setInterval(addItem, 300);
+
+      var itemsCounter = 1;
+      var container = document.getElementById('aos-demo');
+
+      function addItem () {
+        if (itemsCounter > 42) return;
+        var item = document.createElement('div');
+        item.classList.add('aos-item');
+        item.setAttribute('data-aos', 'fade-up');
+       // item.innerHTML = '<div class="aos-item__inner"><h3>' + itemsCounter + '</h3></div>';
+        container.appendChild(item);
+        itemsCounter++;
+      } 
+</script>
 </body>
 </html>

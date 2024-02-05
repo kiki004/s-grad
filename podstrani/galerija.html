@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../stil/galery.css">
     <link rel="stylesheet" href="../stil/lightbox.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet"> <!--puščica gor-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!--animacije-->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script> 
     <title>S-grad</title>
 
 </head>
 <body>
     <script src="../script.js"></script>
     <script src="../src/lightbox-plus-jquery.js"></script>
-        <section>
+        <section id="top">
             <header id="nav">
             <div id="logo">
                 <a href="../index.html"><img src="../img/logobel.svg" alt="logo"></a>
@@ -31,12 +34,18 @@
     </section> 
 
      <!-----------------------------1.DEL--------------------------------------------------------------->
-         <div class="container"> 
-            <div class="naslov">
-                <h1>Galerija</h1>
-            </div> 
+     <div class="bgimg1">
+        <section id="main-box">
+            <div class="main-container">
+                <h1 data-aos="fade-right"data-aos-duration="1000"data-aos-delay="150">Galerija</h1>
+                 <p data-aos="fade-left"data-aos-duration="1000"data-aos-delay="150">Zavedamo se, da je dom več kot le prostor za bivanje - je odraz tega, kdo ste. Zato si vzamemo čas, da razumemo vaše potrebe in želje ter ustvarimo dom, ki se ujema z vašimi sanjami.</p>
+            </div>
+        </section>
+    </div>
+     
+     <div class="container"> 
             <div class="gallery">
-                    <ul class="controls">
+                    <ul class="controls" name="controls"data-aos="zoom-out"data-aos-duration="700"data-aos-offset="170">
                         <li class="gumb active" data-filter="all">vse</li>
                         <li class="gumb" data-filter="Montažne">Montažne hiše</li>
                         <li class="gumb" data-filter="Brunarice">Brunarice</li>
@@ -46,116 +55,117 @@
                         <li class="gumb" data-filter="Ostalo">Ostalo</li>
                     </ul>
             
-        <div class="image-container">
+        <div class="image-container" data-aos="fade-up" data-aos-duration="500"data-aos-offset="200">
             <!----------------------------------------------------------------BRUNE-------------------------------------------------------->
-            <a href="..img/brune/1.jpg" class="slika Brunarice"data-lightbox="models">
-                <img src="../img/brune/1.jpg" alt="BRUNE">
+            <a href="../img/brune/1.jpg" class="slika Brunarice"data-lightbox="models" >
+                <img src="../img/brune/1.jpg" alt="slika1">
             </a>
             <!------slika-1-------->
-            <a href="../img/brune/kamera3.0000.jpg" class="slika Brunarice"data-lightbox="models">
+            <a href="../img/brune/kamera3.0000.jpg" class="slika Brunarice"data-lightbox="models" >
                 <img src="../img/brune/kamera3.0000.jpg" alt="BRUNE">
             </a>
             <!------slika-1-------->
-            <a href="../img/brune/slika1.0000.jpg" class="slika Brunarice"data-lightbox="models">
+            <a href="../img/brune/slika1.0000.jpg" class="slika Brunarice"data-lightbox="models" >
                 <img src="../img/brune/slika1.0000.jpg" alt="BRUNE">
             </a>
             <!------slika-1-------->    
-            <a href="../img/brune/slika3.0.jpg" class="slika Brunarice"data-lightbox="models">
+            <a href="../img/brune/slika3.0.jpg" class="slika Brunarice"data-lightbox="models" >
                 <img src="../img/brune/slika3.0.jpg" alt="BRUNE">
             </a>
             <!------slika-1-------->
-            <a href="../img/montazne/gopro.jpg" class="slika Montažne"data-lightbox="models">
+            <a href="../img/montazne/gopro.jpg" class="slika Montažne"data-lightbox="models" >
                 <img src="../img/montazne/gopro.jpg" alt="BRUNE">
             </a>
             <!------slika-1-------->
-            <a href="../img/montazne/gopro1.jpg" class="slika Montažne"data-lightbox="models">
+            <a href="../img/montazne/gopro1.jpg" class="slika Montažne"data-lightbox="models" >
                 <img src="../img/montazne/gopro1.jpg" alt="BRUNE">
             </a>
             <!---------------------------------------------------------MONTAŽNE---------------------------------------------------->
-            <a href="../img/montazne/gopro11.jpg" class="slika Montažne"data-lightbox="models">
+            <a href="../img/montazne/gopro11.jpg" class="slika Montažne"data-lightbox="models" >
                 <img src="../img/montazne/gopro11.jpg" alt="MONTAŽNE">
             </a>
             <!------slika-1-------->
-            <a href="../img/montazne/gopro2.jpg" class="slika Montažne"data-lightbox="models">
+            <a href="../img/montazne/gopro2.jpg" class="slika Montažne"data-lightbox="models" >
                 <img src="../img/montazne/gopro2.jpg" alt="MONTAŽNE">
             </a>
             <!------slika-1-------->
-            <a href="../img/montazne/gopro3.jpg" class="slika Montažne"data-lightbox="models">
+            <a href="../img/montazne/gopro3.jpg" class="slika Montažne"data-lightbox="models" >
                 <img src="../img/montazne/gopro3.jpg" alt="MONTAŽNE">
             </a>
             <!------slika-1-------->
-            <a href="../img/montazne/gopro_not-2.jpg" class="slika Montažne"data-lightbox="models">
+            <a href="../img/montazne/gopro_not-2.jpg" class="slika Montažne"data-lightbox="models" >
                 <img src="../img/montazne/gopro_not-2.jpg" alt="MONTAŽNE">
             </a>
             <!------slika-1-------->
-            <a href="../img/montazne/gopro_not2.jpg" class="slika Montažne"data-lightbox="models">
+            <a href="../img/montazne/gopro_not2.jpg" class="slika Montažne"data-lightbox="models" >
                 <img src="../img/montazne/gopro_not2.jpg" alt="MONTAŽNE">
             </a>
             <!------slika-1-------->
-            <a href="../img/montazne/gopro_not3.jpg" class="slika Montažne"data-lightbox="models">
+            <a href="../img/montazne/gopro_not3.jpg" class="slika Montažne"data-lightbox="models" >
                 <img src="../img/montazne/gopro_not3.jpg" alt="MONTAŽNE">
             </a>
             <!----------------------------------------OSTALO-------------------------------------------------------->
-            <a href="../img/montazne/šupa+h.jpg" class="slika Ostalo"data-lightbox="models">
+            <a href="../img/montazne/šupa+h.jpg" class="slika Ostalo"data-lightbox="models" >
                 <img src="../img/montazne/šupa+h.jpg" alt="OSTALO">
             </a>
-            <a href="../img/montazne/šupa+h1.jpg" class="slika Ostalo"data-lightbox="models">
+            <a href="../img/montazne/šupa+h1.jpg" class="slika Ostalo"data-lightbox="models" >
                 <img src="../img/montazne/šupa+h1.jpg" alt="OSTALO">
             </a>
             <!------slika-1-------->
-            <a href="../img/montazne/šupa.jpg" class="slika Ostalo"data-lightbox="models">
+            <a href="../img/montazne/šupa.jpg" class="slika Ostalo"data-lightbox="models" >
                 <img src="../img/montazne/šupa.jpg" alt="OSTALO">
             </a>
             <!------slika-1-------->
-            <a href="../img/montazne/šupa2.jpg" class="slika Ostalo"data-lightbox="models">
+            <a href="../img/montazne/šupa2.jpg" class="slika Ostalo"data-lightbox="models" >
                 <img src="../img/montazne/šupa2.jpg" alt="OSTALO">
             </a>
             <!------slika-1-------->
-            <a href="../img/montazne/šupa4.jpg "class="slika Ostalo"data-lightbox="models">
+            <a href="../img/montazne/šupa4.jpg "class="slika Ostalo"data-lightbox="models" >
                 <img src="../img/montazne/šupa4.jpg" alt="OSTALO">
             </a>
             <!------slika-1-------->
-            <a href="../img/montazne/šupa5.jpg" class="slika Ostalo"data-lightbox="models">
+            <a href="../img/montazne/šupa5.jpg" class="slika Ostalo"data-lightbox="models" >
                 <img src="../img/montazne/šupa5.jpg" alt="OSTALO">
             </a>
             <!------slika-1-------->
-            <a href="../img/montazne/šupa6.jpg" class="slika Ostalo"data-lightbox="models">
+            <a href="../img/montazne/šupa6.jpg" class="slika Ostalo"data-lightbox="models" >
                 <img src="../img/montazne/šupa6.jpg" alt="OSTALO">
             </a>
             <!------slika-1-------->
-            <a href="../img/montazne/šupa8.jpg" class="slika Ostalo"data-lightbox="models">
+            <a href="../img/montazne/šupa8.jpg" class="slika Ostalo"data-lightbox="models" >
                 <img src="../img/montazne/šupa8.jpg" alt="OSTALO">
             </a>
             <!-----------------------------------------------------POHIŠTVO------------------------------------------------------>
-            <a href="../img/pohistvo/DSC01116.JPG" class="slika Pohištvo"data-lightbox="models">
+            <a href="../img/pohistvo/DSC01116.JPG" class="slika Pohištvo"data-lightbox="models" >
                 <img src="../img/pohistvo/DSC01116.JPG" alt="POHIŠTVO">
             </a>
 
-            <a href="../img/pohistvo/DSC01124.JPG" class="slika Pohištvo"data-lightbox="models">
+            <a href="../img/pohistvo/DSC01124.JPG" class="slika Pohištvo"data-lightbox="models" >
                 <img src="../img/pohistvo/DSC01124.JPG" alt="POHIŠTVO">
             </a>
 
-            <a href="../img/pohistvo/DSC01127.JPG" class="slika Pohištvo"data-lightbox="models">
+            <a href="../img/pohistvo/DSC01127.JPG" class="slika Pohištvo"data-lightbox="models" >
                 <img src="../img/pohistvo/DSC01127.JPG" alt="POHIŠTVO">
             </a>
 
-            <a href="../img/pohistvo/DSC01136.JPG" class="slika Pohištvo"data-lightbox="models">
+            <a href="../img/pohistvo/DSC01136.JPG" class="slika Pohištvo"data-lightbox="models" >
                 <img src="../img/pohistvo/DSC01136.JPG" alt="POHIŠTVO">
             </a>
 
-            <a href="../img/pohistvo/icon_poh.jpg" class="slika Pohištvo"data-lightbox="models">
+            <a href="../img/pohistvo/icon_poh.jpg" class="slika Pohištvo"data-lightbox="models" >
                 <img src="../img/pohistvo/icon_poh.jpg" alt="POHIŠTVO">
             </a>
             <!-----------------------------------------------------STAVBNO-POHIŠTVO------------------------------------------------------>
-            <a href="../img/stavbno pohištvo/cerkvena01.JPG" class="slika Stavbno-pohištvo"data-lightbox="models">
-                <img src="../img/stavbno pohištvo/cerkvena01.JPG" alt="STAVBNO-POHIŠTVO">
+            <a href="../img/stavbno-pohištvo/cerkvena01.JPG" class="slika Stavbno-pohištvo"data-lightbox="models" >
+                <img src="../img/stavbno-pohištvo/cerkvena01.JPG" alt="STAVBNO-POHIŠTVO">
             </a>
-            <a href="../img/stavbno pohištvo/cerkvena3.JPG" class="slika Stavbno-pohištvo"data-lightbox="models">
-                <img src="../img/stavbno pohištvo/cerkvena3.JPG" alt="STAVBNO-POHIŠTVO">
+            <a href="../img/stavbno-pohištvo/cerkvena3.JPG" class="slika Stavbno-pohištvo"data-lightbox="models" >
+                <img src="../img/stavbno-pohištvo/cerkvena3.JPG" alt="STAVBNO-POHIŠTVO">
             </a>
-            <a href="../img/stavbno pohištvo/DSC01157.JPG" class="slika Stavbno-pohištvo"data-lightbox="models">
-                <img src="../img/stavbno pohištvo/DSC01157.JPG" alt="STAVBNO-POHIŠTVO">
+            <a href="../img/stavbno-pohištvo/stopnice-led.JPG" class="slika Stavbno-pohištvo"data-lightbox="models" >
+                <img src="../img/stavbno-pohištvo/stopnice-led.JPG" alt="STAVBNO-POHIŠTVO">
             </a>
+            
         </div>
     </div>
 
@@ -201,14 +211,38 @@
         </div>
     </div>
 </div>  
-
+<a href="#top" class="scrollLink">
+    <span class="material-icons">arrow_upward</span>
+  </a>
 <!-- jquery cdn link  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <!-- magnific popup js cdn link  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
+<script src="script.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
 <script>
+AOS.init({
+        easing: 'ease-in-out-sine'
+      });
+
+      setInterval(addItem, 300);
+
+      var itemsCounter = 1;
+      var container = document.getElementById('aos-demo');
+
+      function addItem () {
+        if (itemsCounter > 42) return;
+        var item = document.createElement('div');
+        item.classList.add('aos-item');
+        item.setAttribute('data-aos', 'fade-up');
+       // item.innerHTML = '<div class="aos-item__inner"><h3>' + itemsCounter + '</h3></div>';
+        container.appendChild(item);
+        itemsCounter++;
+      }
+
 
 $(document).ready(function(){
 
