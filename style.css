@@ -538,7 +538,7 @@ color: #ffffff;
     word-spacing: 20px;  
   }
   .ikone{
-    margin: 4%;
+    margin-top: 4%;
     display: flex;
     justify-content: center;
   }
@@ -549,18 +549,22 @@ color: #ffffff;
     display: flex;
    text-align: center;
    flex-flow: wrap;
-   margin-right: 12%;
-   margin-left: 12%;  
-   justify-content: space-between;
+   margin-right: 4%;
+   margin-left: 4%;  
+   justify-content: center;
+   align-items: center;
   }
   .ikone ul li{
-    margin: 3%;
-    
+    margin: 0 4%;
+    display: block;
+    height: 390px;
+    width:300px;
+    text-align: center;
   }
 
   .ikone ul li a img{
-    width: 250px;
-    height: 250px;
+    width: 240px;
+    height: 240px;
     margin-top: 15%;
     margin-left: auto;
     margin-right: auto;
@@ -585,8 +589,9 @@ color: #ffffff;
     color: #ffffff;
   }
   .ikone ul li p{
-    max-width: 250px;
+    max-width: 300px;
     margin-left: auto;
+    margin-right: auto;
     padding-top: 5%;
     color: var(--siva);
     font-size: 1rem;
@@ -597,85 +602,104 @@ color: #ffffff;
    padding-top:6% ;
     width: 100%;
     background-color: var(--rj);
-    height:40vh;
-    
-
+    height:auto;
   }
-  .noga{
+.noga{
     display: flex;
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    flex-direction: row;
+    background-color: var(--rj);
+  }
+
+  .box1{
+    width: 32.5%;
+    padding: 3% 0 0 0;
+    display: flex;
     justify-content: center;
-  
-  }
-
-  .box1:nth-child(1){
-    padding: 4% 7% 3% 12%;
-    text-align: center;
+    text-align: left;
     border-right: #ffffff20 solid 0.1px;
-
   }
-  .box1:nth-child(2){
+  .box2{
     margin: 0;
-    width: 400px;
+    width: 35%;
     padding: 1% 2%;
     text-align: center;
     border-right: #ffffff20 solid 0.1px;
   }
-  .box1:nth-child(3){
-    padding: 3% 9% 3% 7%;
-    text-align: center;
-   
+  .box3{
+    width: 32.5%;
+    padding: 3% 0 ;
+    display: flex;
+    justify-content: center;
+    text-align: left;
   }
-  .box1 img{
-    width: 200px;
+  .box2 img{
+    width: 210px;
     margin-bottom: 20px;
   }
-  .box1 a img{
-    width: 8%; 
-    margin-left: 4%;
+
+  .box2 a img{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.8rem; 
+    margin-left: 3%;
     scale: 1;
     opacity: 1;
     transition: 0.3s ease-in-out;
   }
-  .box1 a img:hover{
+  .box2 a img:hover{
     opacity: 0.5;
     scale: 1.2;
   }
 
-  .box1 ul li{
+  .box1 ul li,
+  .box3 ul li
+  {
     text-align: left;
     list-style-type: none;
     margin-top: 4%;
   }
-  .box1 ul li a{
+  .box1 ul li a,
+  .box3 ul li a{
     text-decoration: none;
     list-style-type: none;
   }
-  .box1 ul li a p{
+  .box1 ul li a p,
+  .box3 ul li a p{
     font-family:'Arial Narrow', Arial, sans-serif;
     font-weight: 500;
     color:var(--siva);
     font-size: 90%;
     transition: linear 0.2s;
   }
-  .box1 ul li a p:hover{
+  .box1 ul li a p:hover,
+  .box3 ul li a p:hover{
     color: var(--yellow);
   }
   .kontakt-noga h2{
     color: white;
-    text-shadow: 1px 1px var(--yellow);
+    text-shadow: 1px 1px black;
+    margin-bottom: 15px;
   }
   .kontakt-noga ul li{
     text-decoration: none;
     list-style-type: none;
   }
-  .kontakt-noga ul li p{
+  .kontakt-noga ul li p,
+  .kontakt-noga ul li a p{
     font-family:'Arial Narrow', Arial, sans-serif;
     font-weight: 500;
     color:var(--siva);
-    font-size: 90%;
+    font-size: 1rem;
+  }
+  footer{
+    color: var(--siva);
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    padding-bottom: 10px;
+    background-color: var(--rj);
   }
 /*---------------------------------------------------------------*/
 .nav-mobile {
@@ -692,8 +716,8 @@ color: #ffffff;
 
   .nav-mobile {
     display: block;
+    margin-top: 25px;
   }
-  
   .nav-pages {
     width: 100%;
     padding: 0 ;   
@@ -701,7 +725,6 @@ color: #ffffff;
   .nav-pages ul {
     display: none;
     left: 0;
-
     padding-left: 25%;
   }
   
@@ -775,9 +798,16 @@ color: #ffffff;
       margin-top: 230px;
   }
   }
-
+ @media (max-width:1414px) {
+  .container-ponudba{
+    height: 170vh;
+}
+.container-ponudba::after{
+    height: 170vh;
+}
+}
   @media (max-width:1450px) {
-  /*----------------------2-slike----------------*/
+    /*----------------------2-slike----------------*/
   #vsebina{
     margin-top: 5%;
 }
@@ -874,6 +904,34 @@ color: #ffffff;
     .main-container p{
       font-size: 1.2rem;
     }
+    /*--------------------NOGA---------------------------*/
+    .box2 img{
+      width: 160px;
+    }
+    .box2 a img{
+      width: 2.2rem; 
+    }
+    .kontakt-noga h2{
+    font-size: 1.2rem;
+  }
+  .kontakt-noga ul li p,
+  .kontakt-noga ul li a p{
+    font-weight: 200;
+    font-size: 0.85rem;
+  }
+  footer{
+    font-size: 0.75rem;
+  }
+    /*------------veličina skok na vrh puščica--------------*/
+    .scrollLink span {
+      font-size: 2rem;
+    }
+    .container-ponudba{
+      height: 170vh;
+  }
+  .container-ponudba::after{
+      height: 170vh;
+  }
 }
   @media (max-width:1000px) {
     h1{
@@ -921,6 +979,12 @@ color: #ffffff;
   margin-left: 270px;
 }
   /*------------naša ponudba-------------------*/
+  .container-ponudba{
+    height: 160vh;
+  }
+  .container-ponudba::after{
+    height: 160vh;
+  }
   .ikone ul li h2{
       font-size: 1.3rem;
    }
@@ -969,14 +1033,14 @@ color: #ffffff;
    box-shadow: 0 20px 50px rgba(0,0,0,.8);
    transform: translateY(-75px);
   }
-  /*------------veličina skok na vrh puščice--------------*/
-  .scrollLink span {
-    font-size: 2rem;
-  }
+  /*------------veličina skok na vrh puščica--------------*/
+.scrollLink{
+  z-index: -3;
+}
   }
 
   /*------------------------------------------------------------------------------------*/
- 
+
   @media (max-width:818px)
   {
       /*------------naslovni del-----------------*/
@@ -1011,13 +1075,131 @@ color: #ffffff;
 }
 /*-----------------------------------karte------------------------------*/
     .container2{
-      background-size:273%;
+      background-size:265%;
       height: 110vh;
      
   }
-  .scrollLink{
-    z-index: -3;
+  .container2::after{
+    height: 110vh;
   }
+  /*--------------------noga----------------------------*/
+ .container3{
+ padding-top:6% ;
+  width: 100%;
+  height:auto;
+}
+.noga{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.box1{
+  order: 2;
+  margin: auto;
+  width: 70%;
+  border: none;
+}
+.box2{
+  margin: auto;
+  width: 70%;
+  text-align: center;
+  border: none;
+}
+.box3{
+  margin: auto;
+  padding: 3% 0 ;
+  width: 70%;
+}
+.box2 img{
+  width: 180px;
+  margin-bottom: -10px;
+  margin-top: 20px;
+}
+
+.box2 a img{
+  width: 2.4rem; 
+  margin: 4%;
+}
+
+.box1 ul li,
+.box3 ul li
+{
+  text-align: center;
+  margin-top: 5%;
+}
+.box1 ul li a p,
+  .box3 ul li  p{
+    font-size: 0.95rem;
+  }
+.kontakt-noga h2
+{
+  font-size: 1.6rem;
+  text-align: center;
+}
+footer{
+  margin-top: 40px;
+  font-size: 0.75rem;
+  padding-bottom: 15px;
+}
+  }
+  @media (max-width:723.5px) {
+    .container-ponudba{
+      height: 280vh;
+    }
+    .container-ponudba::after{
+      height: 280vh;
+    }
+    .ponudba h1{
+      margin: 20px 0;
+      font-size: 1.8rem;
+    }
+    /*-----------------------------------karte------------------------------*/
+
+    .container2{
+      background-size:290%;   
+  }
+  
+ }
+  @media (max-width:875.5px)
+  {
+      /*------------naša ponudba-------------------*/
+   
+    .ikone{
+      margin: 1%;
+    }
+
+    .ikone ul li{
+      margin: 0%;
+    }
+  
+    .ikone ul li a img{
+      width: 200px;
+      height: 200px;
+    
+ 
+    }
+    .ikone ul li a img:hover{
+      opacity: .5;
+      scale: 1.07;
+    }
+    .ikone ul li h2{
+      margin-top: 7%;
+      margin-left: auto;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      text-shadow: 2px 2px #000000;
+      transition: .3s ease-in-out;
+      word-spacing: .4rem;
+      color: #ffffff;
+    }
+    .ikone ul li p{
+      max-width: 250px;
+      margin-left: auto;
+      padding-top: 5%;
+      color: var(--siva);
+      font-size: 1rem;
+    }
   }
   @media (max-width:661px)
   {
@@ -1037,27 +1219,155 @@ color: #ffffff;
  /*------------dobrodošli text in 2-slike-----------------*/
   #vsebina{
     margin-top: 5%;
-    align-items: center;
   }
   .container1{
    margin-top: 14%;
    margin-left: -480px;
  }
  .container1 img:nth-child(1){
-   width: 15rem;
+   width: 14rem;
  }
  .container1 img:nth-child(2){
-   width: 18rem;
+   width: 17rem;
    margin-top: 70px;
    margin-left: 210px;
  }
 /*-----------------------------------karte------------------------------*/
     .container2{
       background-size:cover;
-      height: 170vh;
+      height: 210vh;
      
   }
   .container2::after{
-    height: 170vh;
+    height: 210vh;
   }
   }
+  @media (max-width:500px)
+  {
+      /*------------naslovni del-----------------*/
+    #main-box{
+      padding-left: 2%;
+      padding-right: 2%;
+      padding-top: 55%;
+  }
+  .main-container h1{
+      font-size: 3rem;
+      margin-bottom: 25px;
+  }
+  .main-container p{
+    font-size: 1.1rem;
+  }
+    /*------------dobrodošli text in 2-slike-----------------*/
+ .container1{
+  margin-top: 14%;
+  margin-left: -380px;
+}
+.container1 img:nth-child(1){
+  width: 12rem;
+}
+.container1 img:nth-child(2){
+  width: 14rem;
+  margin-top: 70px;
+  margin-left: 150px;
+}
+.us-box h1{
+  font-size: 1.9rem;
+}
+.us-box p:nth-child(2){
+  font-size: 0.88rem;
+}
+.us-box p:nth-child(3){
+  font-size: 0.92rem;
+}
+/*-----------------------------------karte------------------------------*/
+
+
+  .scrollLink{
+    z-index: -3;
+  }
+  /*--------------------noga----------------------------*/
+ .container3{
+ padding-top:6% ;
+  width: 100%;
+  height:auto;
+}
+.noga{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.box1,
+.box2,
+.box3{
+  width: 85%;
+}
+.box2 img{
+  width: 160px;
+  margin-bottom: -10px;
+  margin-top: 20px;
+}
+
+.box2 a img{
+  width: 2.4rem; 
+  margin: 4%;
+}
+.box1 ul li a p,
+  .box3 ul li  p{
+    font-size: 0.9rem;
+  }
+.kontakt-noga h2
+{
+  margin-top: 20px;
+  font-size: 1.4rem;
+}
+footer{
+  margin-top: 50px;
+  font-size: 0.65rem;
+  padding-bottom: 10px;
+}
+  }
+  @media (max-width:450px)
+  {
+      /*------------naslovni del-----------------*/
+    #main-box{
+      padding-left: 2%;
+      padding-right: 2%;
+      padding-top: 80%;
+  }
+  .main-container h1{
+      font-size: 2.5rem;
+      margin-bottom: 23px;
+  }
+  .main-container p{
+    font-size: 0.95rem;
+  }
+}
+@media (max-width:400px) {
+      /*------------dobrodošli text in 2-slike-----------------*/
+ .container1{
+  margin-top: 14%;
+  margin-left: -280px;
+}
+.container1 img:nth-child(1){
+  width: 12rem;
+}
+.container1 img:nth-child(2){
+  width: 14rem;
+  margin-top: 110px;
+  margin-left: 58px;
+}
+
+}
+@media (max-width:357px)
+{
+    /*------------naslovni del-----------------*/
+  #main-box{
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 100%;
+}
+.main-container h1{
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+}
+}
