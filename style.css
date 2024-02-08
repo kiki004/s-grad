@@ -203,10 +203,10 @@ color: #ffffff;
     position: absolute;
 }
 #main-box{
-    margin: 10%;
+    margin: 0 10%;
     padding-left: 17%;
     padding-right: 17%;
-    padding-top: 13%;
+    margin-top: 40vh;
 }
 .main-container{
     max-width: 1000px;
@@ -230,7 +230,7 @@ color: #ffffff;
 /*-------------------------------------2 del------------------------------*/
 .container{
     width: 100%;
-    height: 100vh;
+  height: 100vh;
     overflow: hidden;
     z-index: 1;
     top: 0px;
@@ -241,7 +241,6 @@ color: #ffffff;
     background-position: center center;
     background-image: url('img/les_letnice.png');
     background-size: cover;
-    height: 100vh;
     position: relative;
 }
 .container::after{
@@ -254,7 +253,7 @@ color: #ffffff;
     background-position: center center;
     background-image: linear-gradient(0deg, #2e292526 30%, #2E2925 100%), linear-gradient(180deg,#2e292526 30%, #2e2925 100%);
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
     z-index: -1;
     position: absolute;
 }
@@ -266,7 +265,7 @@ color: #ffffff;
 }
 .us-box{
     /*float: left; */
-    margin-top: 18%;
+    margin-top: 25vh;
     width: 50%;  /*50*/
     max-width: 800px;
     padding: 0 5% 0 4%;   
@@ -299,13 +298,13 @@ color: #ffffff;
 }
 /*------------------------------------------2-slike--------------------------------*/
 .container1{
-  margin-top: 6%; 
+  margin-top: 15vh; 
 }
 .container1 img:nth-child(1){
-  width: 30rem;
+  width: 25vw;
 }
 .container1 img:nth-child(2){
-  width: 35rem;
+  width: 30vw;
 }
 .container1 :nth-child(1){
     max-width: 100%;
@@ -786,7 +785,7 @@ color: #ffffff;
   }
   /*-------------2-slike----------------*/
   .container1{
-    margin-top: 12%;
+    margin-top: 20vh;
   }
   .container1 img:nth-child(1){
     width: 25rem;
@@ -808,11 +807,8 @@ color: #ffffff;
 }
   @media (max-width:1450px) {
     /*----------------------2-slike----------------*/
-  #vsebina{
-    margin-top: 5%;
-}
   .container1{
-    margin-top: 18%;
+    margin-top: 30vh;
   }
   .container1 img:nth-child(1){
     width: 20rem;
@@ -832,7 +828,7 @@ color: #ffffff;
   @media (max-width:1250px) {
      /*----------------------2-slike----------------*/
   .container1{
-    margin-top: 23%;
+    margin-top: 35vh;
   }
   .container1 img:nth-child(1){
     width: 17rem;
@@ -895,7 +891,7 @@ color: #ffffff;
     #main-box{
         padding-left: 13%;
         padding-right: 13%;
-        padding-top: 18%;
+
     }
     .main-container h1{
         font-size: 3.8rem;
@@ -945,7 +941,7 @@ color: #ffffff;
   #main-box{
     padding-left: 10%;
     padding-right: 10%;
-    padding-top: 25%;
+
 }
 .main-container h1{
     font-size: 3.5rem;
@@ -957,24 +953,24 @@ color: #ffffff;
   /*------------dobrodošli text in 2-slike-----------------*/
   #vsebina{
   flex-direction: column;
-   margin-top: -5%;
  }
  .us-box{
   width: 80%;
+  margin-top: 10vh;
   font-size: 0.9rem;
  }
  .us-box p{
   font-size: .95rem;
  }
  .container1{
-  margin-top: 10%;
+  margin-top: 10vh;
   margin-left: 10%;
 }
 .container1 img:nth-child(1){
-  width: 22rem;
+  width: 30vw;
 }
 .container1 img:nth-child(2){
-  width: 26rem;
+  width: 35vw;
   margin-top: 70px;
   margin-left: 270px;
 }
@@ -1022,15 +1018,7 @@ color: #ffffff;
   
   }
   .container_card .card .face.face2{
-    position: relative; 
-    display: flex;
-    border-bottom-right-radius: var(--rob_card);
-    border-bottom-left-radius: var(--rob_card);
-    align-items: center;
-    justify-content: center;
     padding: 15px;
-   box-sizing: border-box;
-   box-shadow: 0 20px 50px rgba(0,0,0,.8);
    transform: translateY(-75px);
   }
   /*------------veličina skok na vrh puščica--------------*/
@@ -1047,7 +1035,6 @@ color: #ffffff;
     #main-box{
       padding-left: 5%;
       padding-right: 5%;
-      padding-top: 35%;
   }
   .main-container h1{
       font-size: 3rem;
@@ -1058,20 +1045,20 @@ color: #ffffff;
   }
     /*------------dobrodošli text in 2-slike-----------------*/
   #vsebina{
-   margin-top: 5%;
+    margin-top: -3vh;
    align-items: center;
  }
  .container1{
-  margin-top: 14%;
-  margin-left: -640px;
+  margin-top: 6vh;
+  margin-left: -480px;
 }
 .container1 img:nth-child(1){
-  width: 19rem;
+  width: 30vw;
 }
 .container1 img:nth-child(2){
-  width: 23rem;
+  width: 35vw;
   margin-top: 70px;
-  margin-left: 270px;
+  margin-left: 200px;
 }
 /*-----------------------------------karte------------------------------*/
     .container2{
@@ -1207,7 +1194,6 @@ footer{
      #main-box{
             padding-left: 3%;
             padding-right: 3%;
-            padding-top: 50%;
       }
      .main-container h1{
             font-size: 2.8rem;
@@ -1217,20 +1203,18 @@ footer{
           font-size: 1.05rem;
       }
  /*------------dobrodošli text in 2-slike-----------------*/
-  #vsebina{
-    margin-top: 5%;
-  }
+
   .container1{
-   margin-top: 14%;
-   margin-left: -480px;
+   margin-top: 6vh;
+   margin-left: -380px;
  }
  .container1 img:nth-child(1){
-   width: 14rem;
+   width: 30vw;
  }
  .container1 img:nth-child(2){
-   width: 17rem;
+   width: 35vw;
    margin-top: 70px;
-   margin-left: 210px;
+   margin-left: 160px;
  }
 /*-----------------------------------karte------------------------------*/
     .container2{
@@ -1248,7 +1232,6 @@ footer{
     #main-box{
       padding-left: 2%;
       padding-right: 2%;
-      padding-top: 55%;
   }
   .main-container h1{
       font-size: 3rem;
@@ -1332,7 +1315,6 @@ footer{
     #main-box{
       padding-left: 2%;
       padding-right: 2%;
-      padding-top: 80%;
   }
   .main-container h1{
       font-size: 2.5rem;
@@ -1364,10 +1346,214 @@ footer{
   #main-box{
     padding-left: 0%;
     padding-right: 0%;
-    padding-top: 100%;
 }
 .main-container h1{
     font-size: 2.3rem;
     margin-bottom: 20px;
 }
+}
+
+@media (max-height:870px)
+{
+  .us-box h1 {
+    width: 80%;   /*55*/  
+   font-size: 1.9rem;
+    line-height: 100%;   
+}
+.us-box p:nth-child(2){
+  margin-top: 4%;
+  line-height: 120%;
+  font-size: 0.88rem;
+}
+.us-box p:nth-child(3){
+  font-size: 0.93rem;
+  letter-spacing: 0.5px;
+  line-height: 120%;
+}
+.container1{
+  margin-top:15vh;
+  margin-left: -280px;
+}
+/*------------------------karte--------------------------*/
+.container2{
+  background-size:cover;
+  height: 195vh;
+}
+.container2::after{
+height: 195vh;
+}
+.container_card .card{
+  margin-bottom: -50px;
+  }
+  /*------------naša ponudba-------------------*/
+  .container-ponudba{
+    height: 300vh;
+  }
+  .container-ponudba::after{
+    height: 300vh;
+  }
+}
+@media (max-height:810px)
+{
+  .us-box h1 {
+    width: 80%;   /*55*/  
+   font-size: 1.9rem;
+    line-height: 100%;   
+}
+.us-box p:nth-child(2){
+  margin-top: 4%;
+  line-height: 120%;
+  font-size: 0.88rem;
+}
+.us-box p:nth-child(3){
+  font-size: 0.93rem;
+  letter-spacing: 0.5px;
+  line-height: 120%;
+}
+.container1{
+  margin-top:11vh;
+  margin-left: -280px;
+}
+/*------------------------karte--------------------------*/
+.container2{
+  background-size:cover;
+  height: 215vh;
+}
+.container2::after{
+height: 215vh;
+}
+.container_card .card{
+  margin-bottom: -50px;
+  }
+  /*------------naša ponudba-------------------*/
+  .container-ponudba{
+    height: 270vh;
+  }
+  .container-ponudba::after{
+    height: 270vh;
+  }
+  .ikone ul li h2{
+    font-size: 1.3rem;
+    margin-bottom: -3%;
+ }
+ .ponudba h1{
+  margin-bottom: 10vh;
+  margin-top: 5vh;
+ }
+ .ikone ul li p{
+  font-size: 0.9rem;
+ }
+ .ikone ul li{
+  margin-top: -9vh;
+ }
+}
+@media (max-height:770px)
+{
+  .us-box h1 {
+    width: 80%;   /*55*/  
+   font-size: 1.9rem;
+    line-height: 100%;   
+}
+.us-box p:nth-child(2){
+  margin-top: 4%;
+  line-height: 120%;
+  font-size: 0.85rem;
+}
+.us-box p:nth-child(3){
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  line-height: 120%;
+}
+.container1{
+  margin-top:8vh;
+  margin-left: -280px;
+}
+/*------------------------karte--------------------------*/
+.container2{
+  background-size:cover;
+  height: 225vh;
+}
+.container2::after{
+height: 225vh;
+}
+.container_card .card{
+  margin-bottom: -50px;
+  }
+
+  /*------------naša ponudba-------------------*/
+  .container-ponudba{
+    height: 300vh;
+  }
+  .container-ponudba::after{
+    height: 300vh;
+  }
+  .ikone ul li h2{
+      font-size: 1.3rem;
+      margin-bottom: -3%;
+   }
+   .ponudba h1{
+    margin-bottom: 10vh;
+    margin-top: 5vh;
+   }
+   .ikone ul li p{
+    font-size: 0.9rem;
+   }
+   .ikone ul li{
+    margin-top: -9vh;
+   }
+}
+@media (max-height:700px)
+{
+  .us-box h1 {
+    width: 80%;   /*55*/  
+   font-size: 1.8rem;
+    line-height: 100%;   
+}
+.us-box p:nth-child(2){
+  margin-top: 4%;
+  line-height: 120%;
+  font-size: 0.85rem;
+}
+.us-box p:nth-child(3){
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  line-height: 110%;
+}
+.container1{
+  margin-top: 4vh;
+  margin-left: -280px;
+}
+/*------------------------karte--------------------------*/
+.container2{
+  background-size:cover;
+  height: 250vh;
+ 
+}
+.container2::after{
+height: 250vh;
+}
+.container_card .card{
+margin-bottom: -50px;
+}
+  /*------------naša ponudba-------------------*/
+  .container-ponudba{
+    height: 340vh;
+  }
+  .container-ponudba::after{
+    height: 340vh;
+  }
+  .ikone ul li h2{
+      font-size: 1.3rem;
+      margin-bottom: -3%;
+   }
+   .ponudba h1{
+    margin-bottom: 10vh;
+    margin-top: 5vh;
+   }
+   .ikone ul li p{
+    font-size: 0.9rem;
+   }
+   .ikone ul li{
+    margin-top: -9vh;
+   }
 }
