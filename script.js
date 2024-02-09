@@ -130,8 +130,8 @@ const animacija = document.getElementById("animacija");
 
 //-------------------------------------------slika se v ozadju počasneje scrola-------------------------------------------------
 window.addEventListener("scroll", function(){
-   let odmik = window.pageYOffset - 1970 ;
-   animacija.style.backgroundPositionY = odmik*0.3 + "px";
+   let odmik = window.pageYOffset - 2950 ;
+   animacija.style.backgroundPositionY = odmik*0.2 + "px";
 })
 
 const initSlider = () => {
