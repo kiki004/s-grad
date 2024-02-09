@@ -183,7 +183,8 @@ color: #ffffff;
 .bgimg1{
     margin: 0;
     width: 100%;
-    height: 100vh;  
+    min-height: 100vh;  
+    height:fit-content ;
     background-image: linear-gradient(180deg, #2E292540 4%, #2E2925 100%);
     padding-top: .1px;
     position: relative; 
@@ -203,10 +204,9 @@ color: #ffffff;
     position: absolute;
 }
 #main-box{
-    margin: 0 10%;
+    margin: 15% 10% 1%;
     padding-left: 17%;
     padding-right: 17%;
-    margin-top: 40vh;
 }
 .main-container{
     max-width: 1000px;
@@ -230,7 +230,8 @@ color: #ffffff;
 /*-------------------------------------2 del------------------------------*/
 .container{
     width: 100%;
-  height: 100vh;
+    min-height: 100vh;
+    height:fit-content;
     overflow: hidden;
     z-index: 1;
     top: 0px;
@@ -253,7 +254,7 @@ color: #ffffff;
     background-position: center center;
     background-image: linear-gradient(0deg, #2e292526 30%, #2E2925 100%), linear-gradient(180deg,#2e292526 30%, #2e2925 100%);
     background-size: cover;
-    min-height: 100vh;
+    min-height: 100%;
     z-index: -1;
     position: absolute;
 }
@@ -327,7 +328,8 @@ color: #ffffff;
 /*--------------------------------------------3-del-----------------------------------*/
 .container2{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    height: fit-content;
     overflow: hidden;
     z-index: 1;
     top: 0px;
@@ -337,10 +339,9 @@ color: #ffffff;
     background-repeat: no-repeat;
     background-position: center center;
     background-image: url(img/brune/slika3.0.jpg);
-    background-size:101%;
+    background-size:115%;
+    background-color: var(--rj);
     position: relative;
-  
-
 }
 .container2::after{
     content: "";
@@ -352,16 +353,15 @@ color: #ffffff;
     background-position: center center;
     background-color: #2e2925a1;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     z-index: -1;
     position: absolute;
 }
 
 #vsebina1{
-    height: 100vh;
+    height: fit-content;
     margin: 4%;
     text-align: center;
-
 }
 .container_card{
     max-width: 1200px;
@@ -497,7 +497,8 @@ color: #ffffff;
   /*---------------------------------4-DEL---------------------------------*/
   .container-ponudba{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    height: fit-content;
     overflow: hidden;
     z-index: 1;
     top: 0px;
@@ -508,7 +509,6 @@ color: #ffffff;
     background-position: center center;
     background-image: url('img/les_letnice.png');
     background-size: cover;
-    height: 120vh;
     position: relative;
 }
 .container-ponudba::after{
@@ -521,7 +521,7 @@ color: #ffffff;
     background-position: center center;
     background-image: linear-gradient(0deg, #2e292526 30%, #2E2925 100%), linear-gradient(180deg,#2e292526 30%, #2e2925 100%);
     background-size: cover;
-    height: 120vh;
+    height: 100%;
     z-index: -1;
     position: absolute;
 }
@@ -775,14 +775,15 @@ color: #ffffff;
     #nav-toggle.active span:before {
       transform: rotate(45deg); }
     #nav-toggle.active span:after {
-      transform: rotate(-45deg); }
-
-
+      transform: rotate(-45deg); 
+    }
+    @media (max-width:1800px) {
+    
+      .container2{
+        background-size:155%;
+    }
+      }
   @media (max-width:1700px) {
-    .container2{
-      background-size:120%;
-     
-  }
   /*-------------2-slike----------------*/
   .container1{
     margin-top: 20vh;
@@ -796,15 +797,11 @@ color: #ffffff;
   .container1 :nth-child(2){
       margin-top: 230px;
   }
+  .container2{
+    background-size:145%;
+}
   }
- @media (max-width:1414px) {
-  .container-ponudba{
-    height: 170vh;
-}
-.container-ponudba::after{
-    height: 170vh;
-}
-}
+ 
   @media (max-width:1450px) {
     /*----------------------2-slike----------------*/
   .container1{
@@ -821,739 +818,525 @@ color: #ffffff;
   }
   /*------------------scrol slika----------------*/
     .container2{
-      background-size:145%;
+      background-size:155%;
      
   }
   }
-  @media (max-width:1250px) {
-     /*----------------------2-slike----------------*/
-  .container1{
-    margin-top: 35vh;
-  }
-  .container1 img:nth-child(1){
-    width: 17rem;
-  }
-  .container1 img:nth-child(2){
-    width: 20rem;
-  }
-  .container1 :nth-child(2){
-      margin-top: 170px;
-  }
-  /*---------------------------------------------------*/
+  @media(max-width:1296px){
+    /*------------------scrol slika----------------*/
     .container2{
-      background-size:cover;
-     height: 140vh;
-  }
-  .container2::after{
-    height: 140vh;
-  }
-  }
-  @media (max-width:1100px) {
-    header{
-      border-end-end-radius: 0%;
-      border-end-start-radius: 0%;
-    }
-    #nav{
-      height: 100px;
-    }
-    #povezave li{
-      margin-top: 16px;
-    }
-    #logo{
-      width: 220px;
-      padding-top: 5px;
-      margin-bottom: 5px;
-     transition: all 0.5s linear;
-     position: absolute;
-    }
-    #logo img{
-      width: 85%;
-    margin-left: 30px;
-    }
-    .link{
-      font-family: 'Times New Roman', Times, serif;
-      font-size: 16px;
-      font-weight: 700;
-      margin-left: 10px;
-      margin-right: 10px;
-      /* margin: 0% 15px;*/
-      padding: 13px;
-       text-transform: uppercase;
-       text-decoration: none;
-       color: #ffffff;
-       border: solid rgba(255, 255, 255, 0) 0px;
-       border-radius: 25px;
-       transition:  0.5s linear;
-       
-    }
-    
-    /*------------naslovni del-----------------*/
-    #main-box{
-        padding-left: 13%;
-        padding-right: 13%;
-
-    }
-    .main-container h1{
-        font-size: 3.8rem;
-        margin-bottom: 30px;
-    }
-    .main-container p{
-      font-size: 1.2rem;
-    }
-    /*--------------------NOGA---------------------------*/
-    .box2 img{
-      width: 160px;
-    }
-    .box2 a img{
-      width: 2.2rem; 
-    }
-    .kontakt-noga h2{
-    font-size: 1.2rem;
-  }
-  .kontakt-noga ul li p,
-  .kontakt-noga ul li a p{
-    font-weight: 200;
-    font-size: 0.85rem;
-  }
-  footer{
-    font-size: 0.75rem;
-  }
-    /*------------veličina skok na vrh puščica--------------*/
-    .scrollLink span {
-      font-size: 2rem;
-    }
-    .container-ponudba{
-      height: 170vh;
-  }
-  .container-ponudba::after{
-      height: 170vh;
+      background-size:200%;
+     
   }
 }
-  @media (max-width:1000px) {
-    h1{
-      font-size: 2rem;
+  @media (max-width:1250px) {
+    /*----------------------2-slike----------------*/
+ .container1{
+   margin-top: 35vh;
+ }
+ .container1 img:nth-child(1){
+   width: 17rem;
+ }
+ .container1 img:nth-child(2){
+   width: 20rem;
+ }
+ .container1 :nth-child(2){
+     margin-top: 170px;
+ }
+ /*---------------------------------------------------*/
+ .container2{
+  background-size:225%;
+  
+}
+ }
+ @media (max-width:1100px) {
+   header{
+     border-end-end-radius: 0%;
+     border-end-start-radius: 0%;
+   }
+   #nav{
+     height: 100px;
+   }
+   #povezave li{
+     margin-top: 16px;
+   }
+   #logo{
+     width: 220px;
+     padding-top: 5px;
+     margin-bottom: 5px;
+   }
+   #logo img{
+     width: 85%;
+   margin-left: 30px;
+   }
+   .link{
+     font-size: 16px;
+     font-weight: 700;
+     margin-left: 10px;
+     margin-right: 10px;
+     padding: 13px;
+
+   }
+   
+   /*------------naslovni del-----------------*/
+   #main-box{
+       padding-left: 13%;
+       padding-right: 13%;
+       margin-top: 30%;
+   }
+   .main-container h1{
+       font-size: 3.8rem;
+       margin-bottom: 30px;
+   }
+   .main-container p{
+     font-size: 1.2rem;
+   }
+    /*------------------scrol slika----------------*/
+    .container2{
+      background-size:258%;
+    
   }
-  #logo img{
-    width: 70%;
-    padding-top: 5%;
-  }
-  /*------------naslovni del-----------------*/
-  #main-box{
-    padding-left: 10%;
-    padding-right: 10%;
+   /*--------------------NOGA---------------------------*/
+   .box2 img{
+     width: 160px;
+   }
+   .box2 a img{
+     width: 2.2rem; 
+   }
+   .kontakt-noga h2{
+   font-size: 1.2rem;
+ }
+ .kontakt-noga ul li p,
+ .kontakt-noga ul li a p{
+   font-weight: 200;
+   font-size: 0.85rem;
+ }
+ footer{
+   font-size: 0.75rem;
+ }
+   /*------------veličina skok na vrh puščica--------------*/
+   .scrollLink span {
+     font-size: 2rem;
+   }
+}
+ @media (max-width:1000px) {
+   h1{
+     font-size: 2rem;
+ }
+ #logo img{
+   width: 70%;
+   padding-top: 5%;
+ }
+ /*------------naslovni del-----------------*/
+ #main-box{
+   padding-left: 10%;
+   padding-right: 10%;
 
 }
 .main-container h1{
-    font-size: 3.5rem;
-    margin-bottom: 25px;
+   font-size: 3.5rem;
+   margin-bottom: 25px;
 }
 .main-container p{
-  font-size: 1.125rem;
+ font-size: 1.125rem;
 }
-  /*------------dobrodošli text in 2-slike-----------------*/
-  #vsebina{
-  flex-direction: column;
- }
- .us-box{
-  width: 80%;
-  margin-top: 10vh;
-  font-size: 0.9rem;
- }
- .us-box p{
-  font-size: .95rem;
- }
- .container1{
-  margin-top: 10vh;
-  margin-left: 10%;
+ /*------------dobrodošli text in 2-slike-----------------*/
+ #vsebina{
+ flex-direction: column;
+}
+.us-box{
+ width: 80%;
+ margin-top: 10vh;
+ font-size: 0.9rem;
+}
+.us-box p{
+ font-size: .95rem;
+}
+.container1{
+ margin-top: 10vh;
+ margin-left: 10%;
 }
 .container1 img:nth-child(1){
-  width: 30vw;
+ width: 35vw;
 }
 .container1 img:nth-child(2){
-  width: 35vw;
-  margin-top: 70px;
-  margin-left: 270px;
+ width: 40vw;
+ margin-top: 70px;
+ margin-left: 270px;
 }
-  /*------------naša ponudba-------------------*/
-  .container-ponudba{
-    height: 160vh;
-  }
-  .container-ponudba::after{
-    height: 160vh;
-  }
-  .ikone ul li h2{
-      font-size: 1.3rem;
-   }
-
-   .ikone ul li p{
-    font-size: 0.9rem;
-   }
-  /*------------postopek izdelave--------------*/
-    .container2{
-      background-size:220%;
-      height: 110vh;
-     
-  }
-  .container2::after{
-    height: 110vh;
+ /*------------naša ponudba-------------------*/
+ .ikone ul li h2{
+     font-size: 1.3rem;
   }
 
-  .container_card .card .face{
-    width:280px;
-    height: 150px;        /*pazi + translateY*/
-    
+  .ikone ul li p{
+   font-size: 0.9rem;
   }
-  .container_card .card .face.face1{
-    transform: translateY(75px);   /*pazi + translateY*/
-  }
-  .container_card .card .face.face1 .content i{
-    font-size: 3.6em;
-  }
-
-  .container_card .card .face.face1 .content h3{
-    font-size: 1.25em;
-  }
-  .container_card .card .face.face2 .content p, a{
-    font-size: .8rem;
+ /*------------postopek izdelave--------------*/
+   .container2{
+     background-size:249%;
   
-  }
-  .container_card .card .face.face2{
-    padding: 15px;
-   transform: translateY(-75px);
-  }
-  /*------------veličina skok na vrh puščica--------------*/
-.scrollLink{
-  z-index: -3;
-}
-  }
-
-  /*------------------------------------------------------------------------------------*/
-
-  @media (max-width:818px)
-  {
-      /*------------naslovni del-----------------*/
-    #main-box{
-      padding-left: 5%;
-      padding-right: 5%;
-  }
-  .main-container h1{
-      font-size: 3rem;
-      margin-bottom: 25px;
-  }
-  .main-container p{
-    font-size: 1.1rem;
-  }
-    /*------------dobrodošli text in 2-slike-----------------*/
-  #vsebina{
-    margin-top: -3vh;
-   align-items: center;
+    
  }
- .container1{
-  margin-top: 6vh;
-  margin-left: -480px;
+
+
+ .container_card .card .face{
+   width:280px;
+   height: 150px;        /*pazi + translateY*/
+   
+ }
+ .container_card .card .face.face1{
+   transform: translateY(75px);   /*pazi + translateY*/
+ }
+ .container_card .card .face.face1 .content i{
+   font-size: 3.6em;
+ }
+
+ .container_card .card .face.face1 .content h3{
+   font-size: 1.25em;
+ }
+ .container_card .card .face.face2 .content p, a{
+   font-size: .8rem;
+ 
+ }
+ .container_card .card .face.face2{
+   padding: 15px;
+  transform: translateY(-75px);
+ }
+ /*------------veličina skok na vrh puščica--------------*/
+.scrollLink{
+ z-index: -3;
+}
+ }
+ @media (max-width:875.5px)
+ {
+     /*------------naša ponudba-------------------*/
+  
+   .ikone{
+     margin: 1%;
+   }
+
+   .ikone ul li{
+     margin: 0%;
+   }
+ 
+   .ikone ul li a img{
+     width: 200px;
+     height: 200px;
+   
+
+   }
+   .ikone ul li a img:hover{
+     opacity: .5;
+     scale: 1.07;
+   }
+   .ikone ul li h2{
+     margin-top: 7%;
+     margin-left: auto;
+     font-size: 1.5rem;
+     text-transform: uppercase;
+     text-shadow: 2px 2px #000000;
+     transition: .3s ease-in-out;
+     word-spacing: .4rem;
+     color: #ffffff;
+   }
+   .ikone ul li p{
+     max-width: 250px;
+     margin-left: auto;
+     padding-top: 5%;
+     color: var(--siva);
+     font-size: 1rem;
+   }
+ }
+ /*------------------------------------------------------------------------------------*/
+
+ @media (max-width:818px)
+ {
+     /*------------naslovni del-----------------*/
+   #main-box{
+     padding-left: 5%;
+     padding-right: 5%;
+ }
+ .main-container h1{
+     font-size: 3rem;
+     margin-bottom: 25px;
+ }
+ .main-container p{
+   font-size: 1.1rem;
+ }
+   /*------------dobrodošli text in 2-slike-----------------*/
+ #vsebina{
+   margin-top: -3vh;
+  align-items: center;
+}
+.container1{
+ margin-top: 6vh;
+ margin-left: -550px;
 }
 .container1 img:nth-child(1){
-  width: 30vw;
+ width: 38vw;
 }
 .container1 img:nth-child(2){
-  width: 35vw;
-  margin-top: 70px;
-  margin-left: 200px;
+ width: 43vw;
+ margin-top: 70px;
+ margin-left: 250px;
 }
 /*-----------------------------------karte------------------------------*/
-    .container2{
-      background-size:265%;
-      height: 110vh;
-     
-  }
-  .container2::after{
-    height: 110vh;
-  }
-  /*--------------------noga----------------------------*/
- .container3{
- padding-top:6% ;
-  width: 100%;
-  height:auto;
+   .container2{
+     background-size:275%; 
+ }
+ /*--------------------noga----------------------------*/
+.container3{
+padding-top:6% ;
+ width: 100%;
+ height:auto;
 }
 .noga{
-  display: flex;
-  width: 100%;
-  flex-direction: column;
+ display: flex;
+ width: 100%;
+ flex-direction: column;
 }
 
 .box1{
-  order: 2;
-  margin: auto;
-  width: 70%;
-  border: none;
+ order: 2;
+ margin: auto;
+ width: 70%;
+ border: none;
 }
 .box2{
-  margin: auto;
-  width: 70%;
-  text-align: center;
-  border: none;
+ margin: auto;
+ width: 70%;
+ text-align: center;
+ border: none;
 }
 .box3{
-  margin: auto;
-  padding: 3% 0 ;
-  width: 70%;
+ margin: auto;
+ padding: 3% 0 ;
+ width: 70%;
 }
 .box2 img{
-  width: 180px;
-  margin-bottom: -10px;
-  margin-top: 20px;
+ width: 180px;
+ margin-bottom: -10px;
+ margin-top: 20px;
 }
 
 .box2 a img{
-  width: 2.4rem; 
-  margin: 4%;
+ width: 2.4rem; 
+ margin: 4%;
 }
 
 .box1 ul li,
 .box3 ul li
 {
-  text-align: center;
-  margin-top: 5%;
+ text-align: center;
+ margin-top: 5%;
 }
 .box1 ul li a p,
-  .box3 ul li  p{
-    font-size: 0.95rem;
-  }
+ .box3 ul li  p{
+   font-size: 0.95rem;
+ }
 .kontakt-noga h2
 {
-  font-size: 1.6rem;
-  text-align: center;
+ font-size: 1.6rem;
+ text-align: center;
 }
 footer{
-  margin-top: 40px;
-  font-size: 0.75rem;
-  padding-bottom: 15px;
+ margin-top: 40px;
+ font-size: 0.75rem;
+ padding-bottom: 15px;
 }
-  }
-  @media (max-width:723.5px) {
-    .container-ponudba{
-      height: 280vh;
-    }
-    .container-ponudba::after{
-      height: 280vh;
-    }
-    .ponudba h1{
-      margin: 20px 0;
-      font-size: 1.8rem;
-    }
-    /*-----------------------------------karte------------------------------*/
-
-    .container2{
-      background-size:290%;   
-  }
+ }
+ @media (max-width:723.5px) {
+   .ponudba h1{
+     margin: 20px 0;
+     font-size: 1.8rem;
+   }
+   /*-----------------------------------karte------------------------------*/
+   .container2{
+     background-size:290%;   
+ }
+}
+ @media (max-width:661px)
+    {
+           /*------------naslovni del-----------------*/
+       #main-box{
+              padding-left: 3%;
+              padding-right: 3%;
+              margin-top: 50%;
+        }
+       .main-container h1{
+              font-size: 2.8rem;
+              margin-bottom: 25px;
+       }
+      .main-container p{
+            font-size: 1.05rem;
+        }
+   /*------------dobrodošli text in 2-slike-----------------*/
   
- }
-  @media (max-width:875.5px)
-  {
-      /*------------naša ponudba-------------------*/
-   
-    .ikone{
-      margin: 1%;
-    }
-
-    .ikone ul li{
-      margin: 0%;
-    }
+    .container1{
+     margin-top: 6vh;
+     margin-left: -440px;
+   }
   
-    .ikone ul li a img{
-      width: 200px;
-      height: 200px;
-    
- 
-    }
-    .ikone ul li a img:hover{
-      opacity: .5;
-      scale: 1.07;
-    }
-    .ikone ul li h2{
-      margin-top: 7%;
-      margin-left: auto;
-      font-size: 1.5rem;
-      text-transform: uppercase;
-      text-shadow: 2px 2px #000000;
-      transition: .3s ease-in-out;
-      word-spacing: .4rem;
-      color: #ffffff;
-    }
-    .ikone ul li p{
-      max-width: 250px;
-      margin-left: auto;
-      padding-top: 5%;
-      color: var(--siva);
-      font-size: 1rem;
-    }
-  }
-  @media (max-width:661px)
-  {
-         /*------------naslovni del-----------------*/
-     #main-box{
-            padding-left: 3%;
-            padding-right: 3%;
-      }
-     .main-container h1{
-            font-size: 2.8rem;
-            margin-bottom: 25px;
-     }
-    .main-container p{
-          font-size: 1.05rem;
-      }
- /*------------dobrodošli text in 2-slike-----------------*/
-
-  .container1{
-   margin-top: 6vh;
-   margin-left: -380px;
- }
- .container1 img:nth-child(1){
-   width: 30vw;
- }
- .container1 img:nth-child(2){
-   width: 35vw;
-   margin-top: 70px;
-   margin-left: 160px;
- }
-/*-----------------------------------karte------------------------------*/
-    .container2{
-      background-size:cover;
-      height: 210vh;
+   .container1 img:nth-child(2){
      
-  }
-  .container2::after{
-    height: 210vh;
-  }
-  }
-  @media (max-width:500px)
-  {
-      /*------------naslovni del-----------------*/
-    #main-box{
-      padding-left: 2%;
-      padding-right: 2%;
-  }
-  .main-container h1{
-      font-size: 3rem;
-      margin-bottom: 25px;
-  }
-  .main-container p{
-    font-size: 1.1rem;
-  }
-    /*------------dobrodošli text in 2-slike-----------------*/
- .container1{
-  margin-top: 14%;
-  margin-left: -380px;
-}
-.container1 img:nth-child(1){
-  width: 12rem;
-}
-.container1 img:nth-child(2){
-  width: 14rem;
-  margin-top: 70px;
-  margin-left: 150px;
-}
-.us-box h1{
-  font-size: 1.9rem;
-}
-.us-box p:nth-child(2){
-  font-size: 0.88rem;
-}
-.us-box p:nth-child(3){
-  font-size: 0.92rem;
-}
-/*-----------------------------------karte------------------------------*/
-
-
-  .scrollLink{
-    z-index: -3;
-  }
-  /*--------------------noga----------------------------*/
- .container3{
- padding-top:6% ;
-  width: 100%;
-  height:auto;
-}
-.noga{
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-}
-.box1,
-.box2,
-.box3{
-  width: 85%;
-}
-.box2 img{
-  width: 160px;
-  margin-bottom: -10px;
-  margin-top: 20px;
-}
-
-.box2 a img{
-  width: 2.4rem; 
-  margin: 4%;
-}
-.box1 ul li a p,
-  .box3 ul li  p{
-    font-size: 0.9rem;
-  }
-.kontakt-noga h2
-{
-  margin-top: 20px;
-  font-size: 1.4rem;
-}
-footer{
-  margin-top: 50px;
-  font-size: 0.65rem;
-  padding-bottom: 10px;
-}
-  }
-  @media (max-width:450px)
-  {
-      /*------------naslovni del-----------------*/
-    #main-box{
-      padding-left: 2%;
-      padding-right: 2%;
-  }
-  .main-container h1{
-      font-size: 2.5rem;
-      margin-bottom: 23px;
-  }
-  .main-container p{
-    font-size: 0.95rem;
-  }
-}
-@media (max-width:400px) {
+     margin-top: 70px;
+     margin-left: 190px;
+   }
+  /*-----------------------------------karte------------------------------*/
+      .container2{
+        background-size:700%;
+    }
+    }
+    @media (max-width:500px)
+    {
+        /*------------naslovni del-----------------*/
+    .main-container h1{
+        font-size: 3rem;
+        margin-bottom: 25px;
+    }
+    .main-container p{
+      font-size: 1.1rem;
+    }
       /*------------dobrodošli text in 2-slike-----------------*/
- .container1{
-  margin-top: 14%;
-  margin-left: -280px;
+   .container1{
+    margin-top: 14%;
+    margin-left: -75%;
+  }
+  .container1 img:nth-child(1){
+    width: 40vw;
+  }
+  .container1 img:nth-child(2){
+    width: 45vw;
+    margin-top: 70px;
+    margin-left: 140px;
+  }
+  .us-box h1{
+    font-size: 1.9rem;
+  }
+  .us-box p:nth-child(2){
+    font-size: 0.88rem;
+  }
+  .us-box p:nth-child(3){
+    font-size: 0.92rem;
+  }
+  /*-----------------------------------karte------------------------------*/
+    .scrollLink{
+      z-index: -3;
+    }
+    /*--------------------noga----------------------------*/
+   .container3{
+   padding-top:6% ;
+    width: 100%;
+    height:auto;
+  }
+  .noga{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  .box1,
+  .box2,
+  .box3{
+    width: 85%;
+  }
+  .box2 img{
+    width: 160px;
+    margin-bottom: -10px;
+    margin-top: 20px;
+  }
+  .box2 a img{
+    width: 2.4rem; 
+    margin: 4%;
+  }
+  .box1 ul li a p,
+    .box3 ul li  p{
+      font-size: 0.9rem;
+    }
+  .kontakt-noga h2
+  {
+    margin-top: 20px;
+    font-size: 1.4rem;
+  }
+  footer{
+    margin-top: 50px;
+    font-size: 0.65rem;
+    padding-bottom: 10px;
+  }
+  .container2{
+    background-size:750%;
 }
-.container1 img:nth-child(1){
-  width: 12rem;
+    }
+    @media (max-width:450px)
+    {
+        /*------------naslovni del-----------------*/
+ j
+    .main-container h1{
+        font-size: 2.5rem;
+        margin-bottom: 23px;
+    }
+    .main-container p{
+      font-size: 0.95rem;
+    }
+    .container2{
+      background-size:850%;
+  }
+  }
+  @media (max-width:400px) {
+        /*------------dobrodošli text in 2-slike-----------------*/
+   .container1{
+    margin-top: 10%;
+    margin-left: -200px;
+  }
+  .container1 img:nth-child(1){
+    width: 40vw;
+  }
+  .container1 img:nth-child(2){
+    width: 45vw;
+    margin-top: 40px;
+    margin-left: 30%;
+  }
+  .container2{
+    background-size:950%;
+    
 }
-.container1 img:nth-child(2){
-  width: 14rem;
-  margin-top: 110px;
-  margin-left: 58px;
-}
-
-}
-@media (max-width:357px)
-{
-    /*------------naslovni del-----------------*/
-  #main-box{
-    padding-left: 0%;
-    padding-right: 0%;
+#main-box{
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-top: 80%;
 }
 .main-container h1{
-    font-size: 2.3rem;
-    margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 25px;
 }
+.main-container p{
+font-size: 0.9rem;
 }
-
-@media (max-height:870px)
-{
-  .us-box h1 {
-    width: 80%;   /*55*/  
-   font-size: 1.9rem;
-    line-height: 100%;   
-}
-.us-box p:nth-child(2){
-  margin-top: 4%;
-  line-height: 120%;
-  font-size: 0.88rem;
-}
-.us-box p:nth-child(3){
-  font-size: 0.93rem;
-  letter-spacing: 0.5px;
-  line-height: 120%;
-}
-.container1{
-  margin-top:15vh;
-  margin-left: -280px;
-}
-/*------------------------karte--------------------------*/
-.container2{
-  background-size:cover;
-  height: 195vh;
-}
-.container2::after{
-height: 195vh;
-}
-.container_card .card{
-  margin-bottom: -50px;
-  }
-  /*------------naša ponudba-------------------*/
-  .container-ponudba{
-    height: 300vh;
-  }
-  .container-ponudba::after{
-    height: 300vh;
-  }
-}
-@media (max-height:810px)
-{
-  .us-box h1 {
-    width: 80%;   /*55*/  
-   font-size: 1.9rem;
-    line-height: 100%;   
+/*------------dobrodošli text in 2-slike-----------------*/
+.us-box h1{
+font-size: 1.7rem;
+width: 90%;
 }
 .us-box p:nth-child(2){
-  margin-top: 4%;
-  line-height: 120%;
-  font-size: 0.88rem;
+font-size: 0.85rem;
 }
 .us-box p:nth-child(3){
-  font-size: 0.93rem;
-  letter-spacing: 0.5px;
-  line-height: 120%;
+font-size: 0.88rem;
 }
-.container1{
-  margin-top:11vh;
-  margin-left: -280px;
-}
-/*------------------------karte--------------------------*/
-.container2{
-  background-size:cover;
-  height: 215vh;
-}
-.container2::after{
-height: 215vh;
-}
-.container_card .card{
-  margin-bottom: -50px;
   }
-  /*------------naša ponudba-------------------*/
-  .container-ponudba{
-    height: 270vh;
+  @media (max-width:357px)
+  {
+      /*------------naslovni del-----------------*/
+    #main-box{
+      padding-left: 0%;
+      padding-right: 0%;
   }
-  .container-ponudba::after{
-    height: 270vh;
+  .main-container h1{
+      font-size: 2.3rem;
+      margin-bottom: 20px;
   }
-  .ikone ul li h2{
-    font-size: 1.3rem;
-    margin-bottom: -3%;
- }
- .ponudba h1{
-  margin-bottom: 10vh;
-  margin-top: 5vh;
- }
- .ikone ul li p{
-  font-size: 0.9rem;
- }
- .ikone ul li{
-  margin-top: -9vh;
- }
+  .container2{
+    background-size:1200%;
 }
-@media (max-height:770px)
-{
-  .us-box h1 {
-    width: 80%;   /*55*/  
-   font-size: 1.9rem;
-    line-height: 100%;   
-}
-.us-box p:nth-child(2){
-  margin-top: 4%;
-  line-height: 120%;
-  font-size: 0.85rem;
-}
-.us-box p:nth-child(3){
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
-  line-height: 120%;
-}
-.container1{
-  margin-top:8vh;
-  margin-left: -280px;
-}
-/*------------------------karte--------------------------*/
-.container2{
-  background-size:cover;
-  height: 225vh;
-}
-.container2::after{
-height: 225vh;
-}
-.container_card .card{
-  margin-bottom: -50px;
   }
 
-  /*------------naša ponudba-------------------*/
-  .container-ponudba{
-    height: 300vh;
-  }
-  .container-ponudba::after{
-    height: 300vh;
-  }
-  .ikone ul li h2{
-      font-size: 1.3rem;
-      margin-bottom: -3%;
-   }
-   .ponudba h1{
-    margin-bottom: 10vh;
-    margin-top: 5vh;
-   }
-   .ikone ul li p{
-    font-size: 0.9rem;
-   }
-   .ikone ul li{
-    margin-top: -9vh;
-   }
-}
-@media (max-height:700px)
-{
-  .us-box h1 {
-    width: 80%;   /*55*/  
-   font-size: 1.8rem;
-    line-height: 100%;   
-}
-.us-box p:nth-child(2){
-  margin-top: 4%;
-  line-height: 120%;
-  font-size: 0.85rem;
-}
-.us-box p:nth-child(3){
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
-  line-height: 110%;
-}
-.container1{
-  margin-top: 4vh;
-  margin-left: -280px;
-}
-/*------------------------karte--------------------------*/
-.container2{
-  background-size:cover;
-  height: 250vh;
- 
-}
-.container2::after{
-height: 250vh;
-}
-.container_card .card{
-margin-bottom: -50px;
-}
-  /*------------naša ponudba-------------------*/
-  .container-ponudba{
-    height: 340vh;
-  }
-  .container-ponudba::after{
-    height: 340vh;
-  }
-  .ikone ul li h2{
-      font-size: 1.3rem;
-      margin-bottom: -3%;
-   }
-   .ponudba h1{
-    margin-bottom: 10vh;
-    margin-top: 5vh;
-   }
-   .ikone ul li p{
-    font-size: 0.9rem;
-   }
-   .ikone ul li{
-    margin-top: -9vh;
-   }
-}
