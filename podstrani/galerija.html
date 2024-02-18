@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../stil/lightbox.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet"> <!--puščica gor-->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!--animacije-->
-    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script> <!---To je za nav za telefon--->
     <title>S-grad</title>
 
 </head>
@@ -21,6 +21,9 @@
                 <a href="../index.html"><img src="../img/logobel.svg" alt="logo"></a>
             </div>
             <div class="nav-pages">
+                <div class="nav-mobile"><a id="nav-toggle" href="#!">    <!--pazi na to!!-->
+                    <span></span></a></div>
+                    <div id="ozadje">
                 <ul id="povezave">
                     <li><a href="../index.html"class="link">Domov</a></li>
                     <li><a href="onas.html"class="link ">O nas</a></li>
@@ -50,12 +53,12 @@
                         <li class="gumb" data-filter="Montažne">Montažne hiše</li>
                         <li class="gumb" data-filter="Brunarice">Brunarice</li>
                         <li class="gumb" data-filter="Ostrešja">Ostrešja</li>
-                        <li class="gumb" data-filter="Stavbno-pohištvo">Stavbno pohištvo</li>
+                        <li class="gumb" data-filter="stavbno-pohistvo">Stavbno pohištvo</li>
                         <li class="gumb" data-filter="Pohištvo">Pohištvo</li>
                         <li class="gumb" data-filter="Ostalo">Ostalo</li>
                     </ul>
             
-        <div class="image-container" data-aos="fade-up" data-aos-duration="500"data-aos-offset="200">
+        <div class="image-container" data-aos="fade-up" data-aos-duration="500"data-aos-offset="170">
             <!----------------------------------------------------------------BRUNE-------------------------------------------------------->
             <a href="../img/brune/1.jpg" class="slika Brunarice"data-lightbox="models" >
                 <img src="../img/brune/1.jpg" alt="slika1">
@@ -155,15 +158,15 @@
             <a href="../img/pohistvo/icon_poh.jpg" class="slika Pohištvo"data-lightbox="models" >
                 <img src="../img/pohistvo/icon_poh.jpg" alt="POHIŠTVO">
             </a>
-            <!-----------------------------------------------------STAVBNO-POHIŠTVO------------------------------------------------------>
-            <a href="../img/stavbno-pohištvo/cerkvena01.JPG" class="slika Stavbno-pohištvo"data-lightbox="models" >
-                <img src="../img/stavbno-pohištvo/cerkvena01.JPG" alt="STAVBNO-POHIŠTVO">
+            <!-----------------------------------------------------stavbno-pohistvo------------------------------------------------------>
+            <a href="../img/stavbno-pohistvo/cerkvena01.JPG" class="slika stavbno-pohistvo"data-lightbox="models" >
+                <img src="../img/stavbno-pohistvo/cerkvena01.JPG" alt="stavbno-pohistvo">
             </a>
-            <a href="../img/stavbno-pohištvo/cerkvena3.JPG" class="slika Stavbno-pohištvo"data-lightbox="models" >
-                <img src="../img/stavbno-pohištvo/cerkvena3.JPG" alt="STAVBNO-POHIŠTVO">
+            <a href="../img/stavbno-pohistvo/cerkvena3.JPG" class="slika stavbno-pohistvo"data-lightbox="models" >
+                <img src="../img/stavbno-pohistvo/cerkvena3.JPG" alt="stavbno-pohistvo">
             </a>
-            <a href="../img/stavbno-pohištvo/stopnice-led.JPG" class="slika Stavbno-pohištvo"data-lightbox="models" >
-                <img src="../img/stavbno-pohištvo/stopnice-led.JPG" alt="STAVBNO-POHIŠTVO">
+            <a href="../img/stavbno-pohistvo/stopnice-led.JPG" class="slika stavbno-pohistvo"data-lightbox="models" >
+                <img src="../img/stavbno-pohistvo/stopnice-led.JPG" alt="stavbno-pohistvo">
             </a>
             
         </div>
@@ -176,16 +179,18 @@
 <div class="container3">
     <div class="noga">
         <div class="box1">
-           <ul>
+          <div class="kontakt-noga">
+          <h2>Podjetje</h2>
+          <ul>
             <li><a href="index.html"><p>S-GRAD d.o.o.</p></a></li>
             <li><a href="index.html"><p>Varstvo osebnih podatkov</p></a></li>
             <li><a href="index.html"><p>Pogoji uporabe</p></a></li>
             <li><a href="index.html"><p>O nas</p></a></li>
-            <li><a href="index.html"><p>Galerija</p></a></li>
             <li><a href="index.html"><p>Kontakt</p></a></li>
            </ul>
+          </div>
         </div>
-        <div class="box1">
+        <div class="box2">
             <div id="logo-noga">
                 <img src="../img/logobel.svg" alt="logo"><br>
             </div>
@@ -196,7 +201,7 @@
                 <a href="#"><img src="../img/social_network_logos/x.svg" alt="X"></a>
             </div>
         </div>
-        <div class="box1">
+        <div class="box3">
             <div class="kontakt-noga">
                 <h2>Kontakt</h2>
                 <ul>
@@ -210,6 +215,7 @@
             </div>
         </div>
     </div>
+    <footer>© 2024 S-grad, Vse pravice pridržane. </footer>
 </div>  
 <a href="#top" class="scrollLink">
     <span class="material-icons">arrow_upward</span>
@@ -262,7 +268,14 @@ $(document).ready(function(){
     });
 
 });
+      //menu za telefon
+      $('#nav-toggle').on('click', function() {
+  this.classList.toggle('active');
+});
 
+$("#nav-toggle").click(function() {
+      $("#povezave").toggle();
+    });
 </script>
 </body>
 </html>

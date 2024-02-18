@@ -62,7 +62,6 @@ header{
   margin-right:auto;
   margin-left:auto;
   justify-content: center;
-  /*display: flex;*/
   transition: all 0.5s linear;  
  
 }
@@ -711,7 +710,8 @@ color: #ffffff;
   background-color: var(--rj);
   z-index: 3;
 }
-@media only screen and (max-width: 1000px) {
+
+@media only screen and (max-width: 1000.5px) {
 
   .nav-mobile {
     display: block;
@@ -719,14 +719,13 @@ color: #ffffff;
   }
   .nav-pages {
     width: 100%;
-    padding: 0 ;   
+    padding: 0 ; 
   }  
   .nav-pages ul {
     display: none;
     left: 0;
     padding-left: 25%;
   }
-  
    .nav-pages ul li a {
     padding: 15px;
     line-height: 20px; 
@@ -734,18 +733,21 @@ color: #ffffff;
   .link{
     display: block;
     width: 50%;
-   
   }
   #ozadje{
     background-color: var(--rj);
     position: absolute;
+    border-bottom: var(--rj)solid 17px;
     width: 100%;
-    transition: 1s linear;
+    overflow:auto;
+    transition: .5s linear;
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1000.5px) {
   #povezave {
-    display: flex !important; } }
+    display: flex !important;
+  }  
+  }
 #nav-toggle {
   position: absolute;
   left: 18px;
@@ -866,16 +868,16 @@ color: #ffffff;
      margin-bottom: 5px;
    }
    #logo img{
-     width: 85%;
-   margin-left: 30px;
-   }
+    width: 70%;
+  margin-left: 30px;
+  padding-top: 5%;
+  }
    .link{
      font-size: 16px;
      font-weight: 700;
      margin-left: 10px;
      margin-right: 10px;
      padding: 13px;
-
    }
    
    /*------------naslovni del-----------------*/
@@ -919,14 +921,11 @@ color: #ffffff;
      font-size: 2rem;
    }
 }
- @media (max-width:1000px) {
+ @media (max-width:1000.5px) {
    h1{
      font-size: 2rem;
  }
- #logo img{
-   width: 70%;
-   padding-top: 5%;
- }
+
  /*------------naslovni del-----------------*/
  #main-box{
    padding-left: 10%;
@@ -1011,20 +1010,15 @@ color: #ffffff;
  @media (max-width:875.5px)
  {
      /*------------naša ponudba-------------------*/
-  
    .ikone{
      margin: 1%;
    }
-
    .ikone ul li{
      margin: 0%;
-   }
- 
+   } 
    .ikone ul li a img{
      width: 200px;
      height: 200px;
-   
-
    }
    .ikone ul li a img:hover{
      opacity: .5;
@@ -1286,15 +1280,15 @@ footer{
         /*------------dobrodošli text in 2-slike-----------------*/
    .container1{
     margin-top: 10%;
-    margin-left: -200px;
+    margin-left: -290px;
   }
   .container1 img:nth-child(1){
-    width: 40vw;
+    width: 43vw;
   }
   .container1 img:nth-child(2){
-    width: 45vw;
-    margin-top: 40px;
-    margin-left: 30%;
+    width: 47vw;
+    margin-top: 60px;
+    margin-left: 35%;
   }
   .container2{
     background-size:950%;
@@ -1337,6 +1331,18 @@ font-size: 0.88rem;
   }
   .container2{
     background-size:1200%;
+}
+.container1{
+  margin-top: 10%;
+  margin-left: -240px;
+}
+.container1 img:nth-child(1){
+  width: 45vw;
+}
+.container1 img:nth-child(2){
+  width: 50vw;
+  margin-top: 60px;
+  margin-left: 35%;
 }
   }
 

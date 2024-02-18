@@ -44,7 +44,7 @@ header{
   top: 0;
   left: 0;
   padding-top: 0;
-  background-color: #2e2925f0;
+  background-color: var(--rj);
   border-end-end-radius: 200%;
   border-end-start-radius: 200%;
   height: 110px;
@@ -64,7 +64,6 @@ header{
   margin-right:auto;
   margin-left:auto;
   justify-content: center;
-  display: flex;
   transition: all 0.5s linear;  
  
 }
@@ -72,7 +71,8 @@ header{
   text-align: center;
   height: 100%;
    width: 100%;
-  margin-top: 10px;
+  margin-top: 15px;
+ position: relative;
   transition: all 0.5s linear; 
 }
 
@@ -82,7 +82,6 @@ header{
   font-weight: 700;
   margin-left: 10px;
   margin-right: 10px;
-  margin-top:-5% ;
   /* margin: 0% 15px;*/
   padding: 13px;
    text-transform: uppercase;
@@ -91,8 +90,7 @@ header{
    border: solid rgba(255, 255, 255, 0) 0px;
    border-radius: 25px;
    transition:  0.5s linear;
-   position: relative;
-      
+   
 }
 
 #povezave li:nth-child(4), #povezave li:nth-child(5), #povezave li:nth-child(6)
@@ -116,8 +114,8 @@ header{
 }
 #nav{
 display: flex;
-height: 110px;
-padding-top: 15px;
+height: 100px;
+padding-top: 20px;
 margin-left: auto;
 margin-right: auto;
 justify-content: center;
@@ -133,24 +131,24 @@ justify-content: center;
   width: 100%;
   /*margin-left: -68%;*/
 }
+  .selected{
+    border: solid var(--yellow )0px;
+    border-radius: 25px;
+    background-color: var(--yellow);
+    color:black;
+  }
+  .selected:hover{
+  color: #ffffff;
+  }
+  
+  .link:hover{
+    border: solid var(--yellow )0px;
+    border-radius: 25px;
+    background-color: var(--yellow);
+    transition: all 0.7s linear ;
+    position: relative;
+  }
 
-.selected{
-  border: solid var(--yellow )0px;
-  border-radius: 25px;
-  background-color: var(--yellow);
-  color:black;
-}
-.selected:hover{
-color: #ffffff;
-}
-
-.link:hover{
-  border: solid var(--yellow )0px;
-  border-radius: 25px;
-  background-color: var(--yellow);
-  transition: all 0.7s linear ;
-  position: relative;
-}
 /*----------------- vrni domozu------------------*/
 .scrollLink {
   position: fixed;
@@ -183,13 +181,16 @@ color: #ffffff;
 }
 /*--------------------------------------1-del strani------------------------------*/
 .bgimg1{
-    margin: 0;
-    width: 100%;
-    height: 70vh; 
-    background-color: #2e292565; 
-    background-image: linear-gradient(180deg, #2E292540 4%, #2E2925 100%);
-    padding-top: .1px;
-    position: relative; 
+  margin: 0;
+  width: 100%;
+  min-height: 70vh;
+  background-color: #2e292565; 
+  background-image: linear-gradient(180deg, #2E292540 4%, #2E2925 100%);
+  padding-top: .1px;
+  position: relative; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .bgimg1::after{
     content: "";
@@ -206,17 +207,16 @@ color: #ffffff;
     position: absolute;
 }
 #main-box{
-    margin: 10%;
-    padding-left: 17%;
-    padding-right: 17%;
-    padding-top: 2%;
+   margin: auto;
+   width: 100%;
 }
 .main-container{
-    max-width: 1000px;
+    max-width: 30%;
     margin: 0; /*pazi*/
     margin:auto;
     text-align: center;
     letter-spacing: 1px; 
+    border: red solid 2px;
 }
 .main-container h1{
     color: var(--yellow);
@@ -232,41 +232,39 @@ color: #ffffff;
 
 /*-------------------------------------2 del------------------------------*/
 .container{
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    z-index: 1;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-image: url('/img/les_letnice.png');
-    background-size: cover;
-    height: 100vh;
-    position: relative;
-    display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items:center;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  background-color: var(--rj);
+  background-repeat: no-repeat;
+  background-position:center center;
+  background-image: url('../img/les_letnice.png');
+  background-size:cover;
+  min-height: 100vh;
+  height: fit-content;
+  position: relative;
 }
 .container::after{
-    content: "";
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-image: linear-gradient(0deg, #2e292526 30%, #2E2925 100%), linear-gradient(180deg,#2e292526 30%, #2e2925 100%);
-    background-size: cover;
-    height: 100vh;
-    z-index: -1;
-    position: absolute;
+  content: "";
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: linear-gradient(0deg, #2e292526 30%, #2E2925 100%), linear-gradient(180deg,#2e292526 30%, #2e2925 100%);
+  background-size: cover;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
 }
 .contact-container{
   width: 100%;
+  margin-top: 10%;
   display: flex;
   justify-content: center;
   align-items:center;
@@ -339,7 +337,6 @@ padding: 20px;
 .box-container{
 flex: 50%;
 margin-left: 10%;
-
 }
 .polje{
   min-height: 60px;
@@ -440,7 +437,7 @@ border: hidden;
 
 .gumb input{
   border: none;
-  margin:10px 30%;
+  margin:auto;
   width: 85px;
   height: 45px;
   background-color: var(--siva);
@@ -460,7 +457,6 @@ border: hidden;
   }
   .info-container{
     width: 90%;
-    border: red solid 2px;
   }
   .box{
     padding:auto;
@@ -471,89 +467,381 @@ border: hidden;
     }
 }
 /*-----------------------------noga-----------------------------------------*/
-
 .container3{
-    margin: 0;
+  margin: 0;
+ padding-top:6% ;
+  width: 100%;
+  background-color: var(--rj);
+  height:auto;
+}
+.noga{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  background-color: var(--rj);
+}
+
+.box1{
+  width: 32.5%;
+  padding: 3% 0 0 0;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  border-right: #ffffff20 solid 0.1px;
+}
+.box2{
+  margin: 0;
+  width: 35%;
+  padding: 1% 2%;
+  text-align: center;
+  border-right: #ffffff20 solid 0.1px;
+}
+.box3{
+  width: 32.5%;
+  padding: 3% 0 ;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+.box2 img{
+  width: 210px;
+  margin-bottom: 20px;
+}
+
+.box2 a img{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8rem; 
+  margin-left: 3%;
+  scale: 1;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+.box2 a img:hover{
+  opacity: 0.5;
+  scale: 1.2;
+}
+
+.box1 ul li,
+.box3 ul li
+{
+  text-align: left;
+  list-style-type: none;
+  margin-top: 4%;
+}
+.box1 ul li a,
+.box3 ul li a{
+  text-decoration: none;
+  list-style-type: none;
+}
+.box1 ul li a p,
+.box3 ul li a p{
+  font-family:'Arial Narrow', Arial, sans-serif;
+  font-weight: 500;
+  color:var(--siva);
+  font-size: 90%;
+  transition: linear 0.2s;
+}
+.box1 ul li a p:hover,
+.box3 ul li a p:hover{
+  color: var(--yellow);
+}
+.kontakt-noga h2{
+  color: white;
+  text-shadow: 1px 1px black;
+  margin-bottom: 15px;
+}
+.kontakt-noga ul li{
+  text-decoration: none;
+  list-style-type: none;
+}
+.kontakt-noga ul li p,
+.kontakt-noga ul li a p{
+  font-family:'Arial Narrow', Arial, sans-serif;
+  font-weight: 500;
+  color:var(--siva);
+  font-size: 1rem;
+}
+footer{
+  color: var(--siva);
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  padding-bottom: 10px;
+  background-color: var(--rj);
+}
+/*---------------------------------------------------------------*/
+.nav-mobile {
+  display: none;
+  height: 70px;
+  width: 70px;
+  top: 0;
+  right: 0;
+  background-color: var(--rj);
+  z-index: 3;
+  position: absolute;
+}
+@media only screen and (max-width: 1000.5px) {
+  .nav-mobile {
+    display: block;
+    margin-top: 25px;
+  }
+  .nav-pages {
+    width: 100%;
+    padding: 0 ; 
+  }  
+  .nav-pages ul {
+    display: none;
+    left: 0;
+    padding-left: 25%;
+  }
+   .nav-pages ul li a {
+    padding: 15px;
+    line-height: 20px; 
+  }
+  .link{
+    display: block;
+    width: 50%;
+  }
+  #ozadje{
+    background-color: var(--rj);
+    border-bottom: var(--rj)solid 17px;
+    width: 100%;
+    overflow:auto;
+    transition: .5s linear;
+    position: absolute;
+  }
+}
+@media screen and (min-width: 1000.5px) {
+  #povezave {
+    display: flex !important;
+  }  
+  }
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0; }
+  #nav-toggle span,
+  #nav-toggle span:before,
+  #nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 4px;
+    width: 30px;
+    background: white;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 300ms ease-in-out; }
+  #nav-toggle span:before {
+    top: -10px; }
+  #nav-toggle span:after {
+    bottom: -10px; }
+  #nav-toggle.active span {
+    background-color: transparent; }
+    #nav-toggle.active span:before, #nav-toggle.active span:after {
+      top: 0; }
+    #nav-toggle.active span:before {
+      transform: rotate(45deg); }
+    #nav-toggle.active span:after {
+      transform: rotate(-45deg); 
+    }
+@media (max-width:1100px) {
+  header{
+    border-end-end-radius: 0%;
+    border-end-start-radius: 0%;
+  }
+  #nav{
+    height: 100px;
+  }
+  #povezave li{
+    margin-top: 16px;
+  }
+  #logo{
+    width: 220px;
+    padding-top: 5px;
+    margin-bottom: 5px;
+  }
+  #logo img{
+    width: 70%;
+  margin-left: 30px;
+  padding-top: 5%;
+  }
+  .link{
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 13px;
+  }
+  .main-container{
+    max-width: 70%;
+  }
+
+  /*--------------------NOGA---------------------------*/
+.box2 img{
+width: 160px;
+}
+.box2 a img{
+width: 2.2rem; 
+}
+.kontakt-noga h2{
+font-size: 1.2rem;
+}
+.kontakt-noga ul li p,
+.kontakt-noga ul li a p{
+font-weight: 200;
+font-size: 0.85rem;
+}
+footer{
+font-size: 0.75rem;
+}
+}
+@media (max-width:838px)
+    {
+   /*------------------------------1-DEL-------------------------*/
+   .main-container{
+    max-width: 90%;
+  }
+   .main-container h1{
+      font-size: 2.7rem;
+    }
+    .main-container p{
+      font-size: 1rem;
+    }
+    .box-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      padding: 0 8% 0 5%;
+      }
+    .polje{
+      min-height: 60px;
+      width: 100%;
+     
+    }
+    /*--------------------noga!!!!----------------------------*/
+   .container3{
    padding-top:6% ;
     width: 100%;
-    background-color: var(--rj);
-    height:40vh;
-    
-  
-  }
-  .noga{
+    height:auto;
+   }
+   .noga{
     display: flex;
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-  
-  }
-  
-  .box1:nth-child(1){
-    padding: 4% 7% 3% 12%;
+    width: 100%;
+    flex-direction: column;
+   }
+   .box1{
+    order: 2;
+    margin: auto;
+    width: 70%;
+    border: none;
+   }
+   .box2{
+    margin: auto;
+    width: 70%;
     text-align: center;
-    border-right: #ffffff20 solid 0.1px;
-  
-  }
-  .box1:nth-child(2){
-    margin: 0;
-    width: 400px;
-    padding: 1% 2%;
-    text-align: center;
-    border-right: #ffffff20 solid 0.1px;
-  }
-  .box1:nth-child(3){
-    padding: 3% 9% 3% 7%;
-    text-align: center;
+    border: none;
+   }
+   .box3{
+    margin: auto;
+    padding: 3% 0 ;
+    width: 70%;
+   }
+   .box2 img{
+    width: 180px;
+    margin-bottom: -10px;
+    margin-top: 20px;
+   }
    
+   .box2 a img{
+    width: 2.4rem; 
+    margin: 4%;
+   }
+   
+   .box1 ul li,
+   .box3 ul li
+   {
+    text-align: center;
+    margin-top: 5%;
+   }
+   .box1 ul li a p,
+    .box3 ul li  p{
+      font-size: 0.95rem;
+    }
+   .kontakt-noga h2
+   {
+    font-size: 1.6rem;
+    text-align: center;
+   }
+   footer{
+    margin-top: 40px;
+    font-size: 0.75rem;
+    padding-bottom: 15px;
+   }
+    }
+    @media (max-width:650px)
+{
+/*------------------------------1-DEL-------------------------*/
+.main-container{
+  max-width: 90%;
+}
+ .main-container h1{
+    font-size: 2.5rem;
   }
-  .box1 img{
-    width: 200px;
-    margin-bottom: 20px;
+  .main-container p{
+    font-size: 1rem;
   }
-  .box1 a img{
-    width: 8%; 
-    margin-left: 4%;
-    scale: 1;
-    opacity: 1;
-    transition: 0.3s ease-in-out;
+}
+@media (max-width:550px)
+{
+/*------------------------------1-DEL-------------------------*/
+.main-container{
+  max-width: 95%;
+}
+ .main-container h1{
+    font-size: 2.1rem;
   }
-  .box1 a img:hover{
-    opacity: 0.5;
-    scale: 1.2;
+  .main-container p{
+    font-size: .95rem;
   }
-  
-  .box1 ul li{
-    text-align: left;
-    list-style-type: none;
-    margin-top: 4%;
+}
+@media (max-width:450px) {
+  .info-container{
+    padding-left: 0px;
+    margin-top: 30%;
   }
-  .box1 ul li a{
-    text-decoration: none;
-    list-style-type: none;
+  .box{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
   }
-  .box1 ul li a p{
-    font-family:'Arial Narrow', Arial, sans-serif;
-    font-weight: 500;
-    color:var(--siva);
-    font-size: 1.1rem;
-    transition: linear 0.2s;
-  }
-  .box1 ul li a p:hover{
-    color: var(--yellow);
-  }
-  .kontakt-noga h2{
-    color: white;
-    text-shadow: 1px 1px var(--yellow);
-  }
-  .kontakt-noga ul li{
-    text-decoration: none;
-    list-style-type: none;
-  }
-  .kontakt-noga ul li p{
-    font-family:'Arial Narrow', Arial, sans-serif;
-    font-weight: 500;
-    color:var(--siva);
-    font-size: 1.1rem;
-  }
+  .icon{
+    margin: auto;
+    margin-top:-200px;
+    width: 40px;
+    height: 40px;
+    font-size: 2rem; 
+    position: absolute;
+}
+#mail{
+  padding-bottom:60px; /*pazi ko boš dodal email naslove*/
+}
+.text{
+  width: 200px;
+    margin-top: 35px;
+    text-align: center;
+}
+.text h3{
+    font-size: 1.3rem;
+}
+.text ul li p{
+  font-size: .8rem;
+}  
+}

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Zelo pomembno!!!!!-->
     <link rel="stylesheet" href="../stil/bruna3d.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -15,7 +16,6 @@
 <style>
         .container-ozadje{
             width: 100%;
-            height: 100vh;
             overflow: hidden;
             z-index: 1;
             top: 0px;
@@ -26,7 +26,8 @@
             background-position: center center;
             background-image: url('../img/les_letnice.png');
             background-size: cover;
-            height: 80vh;
+            min-height: 20vh;
+            height: fit-content;
             position: relative;
         }
         .container-ozadje::after{
@@ -39,7 +40,7 @@
             background-position: center center;
             background-image: linear-gradient(0deg, #2e292526 30%, #2E2925 100%), linear-gradient(180deg,#2e292526 30%, #2e2925 100%);
             background-size: cover;
-            height: 80vh;
+            height: 100%;
             z-index: -1;
             position: absolute;
         }
@@ -57,6 +58,9 @@
                 <a href="../index.html"><img src="../img/logobel.svg" alt="logo"></a>
             </div>
             <div class="nav-pages">
+                <div class="nav-mobile"><a id="nav-toggle" href="#!">    <!--pazi na to!!-->
+                    <span></span></a></div>
+                    <div id="ozadje">
                 <ul id="povezave">
                     <li><a href="../index.html"class="link">Domov</a></li>
                     <li><a href="onas.html"class="link ">O nas</a></li>
@@ -66,9 +70,10 @@
                     <li><a href="kontakt.html"class="link">Kontakt</a></li>
                 </ul>
             </div>
+            </div>
      </header>
      <!-----------------------------1.DEL--------------------------------------------------------------->
-         <div class="container-ozadje"> 
+         <div class="bgimg1"> 
             <div class="naslov">
                 <h1 data-aos="fade-right"data-aos-duration="1000"data-aos-delay="150">Vrata svetega Urbana</h1>
                 <p data-aos="fade-left"data-aos-duration="1000"data-aos-delay="650">
@@ -79,30 +84,30 @@
  <!-----------------------------------Galerija----------------------------------------->
         </section> 
 <div class="postavitev-galerije">
-    <div class="container" data-aos="zoom-in"data-aos-duration="800">
+    <div class="container" data-aos="zoom-in"data-aos-duration="700">
      <div class="slider-wrapper">
       <button id="prev-slide" class="slide-button material-symbols-rounded">
         chevron_left
       </button>
       <ul class="image-list">
         <a href="../img/stavbno-pohištvo/cerkvena01.JPG" data-lightbox="models" data-title="Slika 1">
-            <img class="image-item" src="../img/stavbno-pohištvo/cerkvena01.JPG" alt="img-1" />
+            <img class="image-item" src="../img/stavbno-pohistvo/cerkvena01.JPG" alt="img-1" />
         </a>
 
         <a href="../img/stavbno-pohištvo/cerkvena1.JPG" data-lightbox="models" data-title="Slika 2">
-            <img class="image-item" src="../img/stavbno-pohištvo/cerkvena1.JPG" alt="img-2" />
+            <img class="image-item" src="../img/stavbno-pohistvo/cerkvena1.JPG" alt="img-2" />
         </a>
 
         <a href="../img/stavbno-pohištvo/CERKVENA2.JPG" data-lightbox="models" data-title="Slika 3">
-            <img class="image-item" src="../img/stavbno-pohištvo/CERKVENA2.JPG" alt="img-3" />
+            <img class="image-item" src="../img/stavbno-pohistvo/CERKVENA2.JPG" alt="img-3" />
         </a>
 
         <a href="../img/stavbno-pohištvo/cerkvena3.JPG" data-lightbox="models" data-title="Slika 4">
-            <img class="image-item" src="../img/stavbno-pohištvo/cerkvena3.JPG" alt="img-4" />
+            <img class="image-item" src="../img/stavbno-pohistvo/cerkvena3.JPG" alt="img-4" />
         </a>
 
         <a href="../img/stavbno pohištvo/cerkvena4.JPG" data-lightbox="models" data-title="Slika 5">
-            <img class="image-item" src="../img/stavbno-pohištvo/cerkvena4.JPG" alt="img-5" />
+            <img class="image-item" src="../img/stavbno-pohistvo/cerkvena4.JPG" alt="img-5" />
         </a>
 
 
@@ -122,48 +127,50 @@
 
 </div> 
     <!--------------------------------------NOGA----------------------------------------------------------->
-<div class="container3">
-    <div class="noga">
-        <div class="box1">
-           <ul>
-            <li><a href="index.html"><p>S-GRAD d.o.o.</p></a></li>
-            <li><a href="index.html"><p>Varstvo osebnih podatkov</p></a></li>
-            <li><a href="index.html"><p>Pogoji uporabe</p></a></li>
-            <li><a href="index.html"><p>O nas</p></a></li>
-            <li><a href="index.html"><p>Galerija</p></a></li>
-            <li><a href="index.html"><p>Kontakt</p></a></li>
-           </ul>
-        </div>
-        <div class="box1">
-            <div id="logo-noga">
-                <img src="../img/logobel.svg" alt="logo"><br>
+    <div class="container3">
+        <div class="noga">
+            <div class="box1">
+              <div class="kontakt-noga">
+              <h2>Podjetje</h2>
+              <ul>
+                <li><a href="index.html"><p>S-GRAD d.o.o.</p></a></li>
+                <li><a href="index.html"><p>Varstvo osebnih podatkov</p></a></li>
+                <li><a href="index.html"><p>Pogoji uporabe</p></a></li>
+                <li><a href="index.html"><p>O nas</p></a></li>
+                <li><a href="index.html"><p>Kontakt</p></a></li>
+               </ul>
+              </div>
             </div>
-            <div id="socialna-omrezja">
-                <a href="https://www.youtube.com/channel/UCdSlhh6HXzBkvX7LWV7mZDA"target="_blank"><img src="../img/social_network_logos/yt.svg" alt="YouTube"></a>
-                <a href="#"><img src="../img/social_network_logos/inst.svg" alt="Instagram"></a>
-                <a href="#"><img src="../img/social_network_logos/fb.svg" alt="Facebook"></a>
-                <a href="#"><img src="../img/social_network_logos/x.svg" alt="X"></a>
+            <div class="box2">
+                <div id="logo-noga">
+                    <img src="../img/logobel.svg" alt="logo"><br>
+                </div>
+                <div id="socialna-omrezja">
+                    <a href="https://www.youtube.com/channel/UCdSlhh6HXzBkvX7LWV7mZDA"target="_blank"><img src="../img/social_network_logos/yt.svg" alt="YouTube"></a>
+                    <a href="#"><img src="../img/social_network_logos/inst.svg" alt="Instagram"></a>
+                    <a href="#"><img src="../img/social_network_logos/fb.svg" alt="Facebook"></a>
+                    <a href="#"><img src="../img/social_network_logos/x.svg" alt="X"></a>
+                </div>
+            </div>
+            <div class="box3">
+                <div class="kontakt-noga">
+                    <h2>Kontakt</h2>
+                    <ul>
+                        <li><p>S-GRAD d.o.o.</p></li>
+                        <li><p>Križevska vas 21</p></li>
+                        <li><p>8330 Metlika</p></li>
+                        <li><p>T-Lesni del: +386 41 825 307</p></li>
+                        <li><p>T-Gradbeni del: +386 31 720 272</p></li>
+                        <li><p>M: kristjan.lukek@gmail.com</p></li>
+                       </ul>
+                </div>
             </div>
         </div>
-        <div class="box1">
-            <div class="kontakt-noga">
-                <h2>Kontakt</h2>
-                <ul>
-                    <li><p>S-GRAD d.o.o.</p></li>
-                    <li><p>Križevska vas 21</p></li>
-                    <li><p>8330 Metlika</p></li>
-                    <li><p>T-Lesni del: +386 41 825 307</p></li>
-                    <li><p>T-Gradbeni del: +386 31 720 272</p></li>
-                    <li><p>M: kristjan.lukek@gmail.com</p></li>
-                   </ul>
-            </div>
-        </div>
-    </div>
-</div>  
-<a href="#top" class="scrollLink">
-    <span class="material-icons">arrow_upward</span>
-  </a>
-
+        <footer>© 2024 S-grad, Vse pravice pridržane. </footer>
+    </div>  
+    <a href="#top" class="scrollLink">
+        <span class="material-icons">arrow_upward</span>
+      </a>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
  
   <script>
@@ -187,7 +194,14 @@
           container.appendChild(item);
           itemsCounter++;
         }
-      
+        //menu za telefon
+        $('#nav-toggle').on('click', function() {
+        this.classList.toggle('active');
+        });
+        
+        $("#nav-toggle").click(function() {
+            $("#povezave").toggle();
+            });
   </script>
 </body>
 </html>

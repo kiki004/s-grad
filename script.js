@@ -1,4 +1,4 @@
-  
+
 window.onscroll = function() {scrollFunction()};
 
 const linki = document.getElementsByClassName("link");
