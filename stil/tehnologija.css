@@ -241,7 +241,7 @@ color: #ffffff;
     background-color: var(--rj);
     background-repeat: repeat-y;
     background-position: center center;
-    background-image: url('../img/les_letnice.png');
+    background-image: url('../img/les_letnice.jpg');
     background-size:contain;
     height: fit-content;
     position: relative;

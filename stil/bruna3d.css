@@ -199,7 +199,7 @@ left: 0px;
 bottom: 0px;
 right: 0px;
 background-repeat: no-repeat;
-background-image: url('../img/les_letnice.png');
+background-image: url('../img/les_letnice.jpg');
 background-size:cover;
 background-position: 50% 55%;
 z-index: -1;
@@ -389,7 +389,7 @@ video {
     right: 0px;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url('../img/les_letnice.png');
+    background-image: url('../img/les_letnice.jpg');
     background-size: cover;
     height: fit-content;
     position: relative;
