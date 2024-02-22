@@ -1,0 +1,1348 @@
+:root{
+    --yellow:#FCB31C;
+    --siva:#cccccc;
+    --rj:#2e2925;
+    --rob_card: 20px;
+}
+html {
+	scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style-type: none;
+}
+h1{
+    font-size: 2.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--yellow);
+}
+h2{
+        font-size: 1.5;
+        font-family: 'Times New Roman', Times, serif;
+        color: var(--yellow);
+}
+a{
+    font-size: 19px;
+}
+p{
+    color: #ffffff;
+    font-family: Helvetica,sans-serif ;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+/*---------------------------------nav bar-----------------------*/
+
+header{
+  margin: 0;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 0;
+  background-color: var(--rj);
+  border-end-end-radius: 200%;
+  border-end-start-radius: 200%;
+  height: 110px;
+  z-index: 2; 
+  position: fixed;
+  transition:all 0.5s linear;
+}
+
+.nav-pages {
+  width: 1400px;
+ padding-top: 0%;
+  margin-top: 8px;
+  transition: all 0.5s linear;
+}
+#povezave{
+  padding-top: 5px;
+  margin-right:auto;
+  margin-left:auto;
+  justify-content: center;
+  transition: all 0.5s linear;  
+ 
+}
+#povezave li{
+  text-align: center;
+  height: 100%;
+   width: 100%;
+  margin-top: 15px;
+ position: relative;
+  transition: all 0.5s linear; 
+}
+
+.link{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 10px;
+  margin-right: 10px;
+  /* margin: 0% 15px;*/
+  padding: 13px;
+   text-transform: uppercase;
+   text-decoration: none;
+   color: #ffffff;
+   border: solid rgba(255, 255, 255, 0) 0px;
+   border-radius: 25px;
+   transition:  0.5s linear;
+   
+}
+
+#povezave li:nth-child(4), #povezave li:nth-child(5), #povezave li:nth-child(6)
+{
+  float:right;
+ 
+}
+
+#povezave li:nth-child(1), #povezave li:nth-child(2), #povezave li:nth-child(3)
+{
+  float:left;
+ 
+}
+#povezave li:nth-child(3)
+{
+ margin-right: 10%; 
+}
+#povezave li:nth-child(4)
+{
+ margin-left: 10%; 
+}
+#nav{
+display: flex;
+height: 100px;
+padding-top: 20px;
+margin-left: auto;
+margin-right: auto;
+justify-content: center;
+}
+#logo{
+  width: 220px;
+  padding-top: 5px;
+  margin-bottom: 5px;
+ transition: all 0.5s linear;
+ position: absolute;
+}
+#logo img{
+  width: 100%;
+  /*margin-left: -68%;*/
+}
+
+.selected{
+  border: solid var(--yellow )0px;
+  border-radius: 25px;
+  background-color: var(--yellow);
+  color:black;
+}
+.selected:hover{
+color: #ffffff;
+}
+
+.link:hover{
+  border: solid var(--yellow )0px;
+  border-radius: 25px;
+  background-color: var(--yellow);
+  transition: all 0.7s linear ;
+  position: relative;
+}
+/*--------------------------------------1-del strani------------------------------*/
+
+.scrollLink {
+	position: fixed;
+	top: 50%;
+	right: 50px;
+	display: none; /*v js imaš inline-flex če nedela spremeni nazaj*/
+	align-items: center;
+	justify-content: center;
+	background-color: var(--yellow);
+	border-radius: 2rem;
+	padding: 0.5rem;
+	text-decoration: none;
+	transition: 0.2s ease-out;
+  z-index: 2;
+
+}
+.scrollLink span {
+  color: black;
+	font-size: 2.5rem;
+	transition: 0.2s ease-out;
+}
+
+.scrollLink:hover {
+	background-color:#d3910e;
+}
+.scrollLink:hover span {
+	transform: translateY(-4px);
+  color: var(--siva);
+}
+
+
+.bgimg1{
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;  
+    height:fit-content ;
+    background-image: linear-gradient(180deg, #2E292540 4%, #2E2925 100%);
+    padding-top: .1px;
+    position: relative; 
+}
+.bgimg1::after{
+    content: "";
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-repeat: no-repeat;
+    background-image: url('img/brune/1.jpg');
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+    position: absolute;
+}
+#main-box{
+    margin: 15% 10% 1%;
+    padding-left: 17%;
+    padding-right: 17%;
+}
+.main-container{
+    max-width: 1000px;
+    margin: 0; /*pazi*/
+    margin:auto;
+    text-align: center;
+    letter-spacing: 1px; 
+}
+.main-container h1{
+    color: var(--yellow);
+    font-size: 4.5rem;
+    letter-spacing: 1px;
+    line-height: 95%;
+    margin-bottom: 40px;
+}
+.main-container p{
+  font-size: 1.35rem;
+  font-weight: 550;
+}
+
+/*-------------------------------------2 del------------------------------*/
+.container{
+    width: 100%;
+    min-height: 100vh;
+    height:fit-content;
+    overflow: hidden;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('img/les_letnice.jpg');
+    background-size: cover;
+    position: relative;
+}
+.container::after{
+    content: "";
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: linear-gradient(0deg, #2e292526 30%, #2E2925 100%), linear-gradient(180deg,#2e292526 30%, #2e2925 100%);
+    background-size: cover;
+    min-height: 100%;
+    z-index: -1;
+    position: absolute;
+}
+#vsebina{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.us-box{
+    /*float: left; */
+    margin-top: 25vh;
+    width: 50%;  /*50*/
+    max-width: 800px;
+    padding: 0 5% 0 4%;   
+}
+.us-box h1 {
+    width: 55%;   /*55*/  
+    color: var(--yellow);
+    word-spacing: 7px;
+    letter-spacing: 1px;
+    line-height: 120%;   
+}
+.us-box p:nth-child(2){
+    margin-top: 3%;
+    margin-bottom: 3%;
+    padding-left: 5%;
+    color: var(--siva);
+    line-height: 130%;
+    border-left: var(--yellow) 3px solid;
+    border-radius: 9px;
+}
+.us-box p:nth-child(3){
+    font-size: 120%;
+    font-family: Helvetica,sans-serif ;
+    margin-right: 3%;
+    color:#ffffff;
+    letter-spacing: 0.5px;
+    line-height: 140%;
+    border-right: var(--yellow) 3px solid;
+    border-radius: 9px;
+}
+/*------------------------------------------2-slike--------------------------------*/
+.container1{
+  margin-top: 15vh; 
+}
+.container1 img:nth-child(1){
+  width: 25vw;
+}
+.container1 img:nth-child(2){
+  width: 30vw;
+}
+.container1 :nth-child(1){
+    max-width: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+    border-radius: 20px;
+    z-index: 1;
+    overflow: hidden;
+    position:absolute;
+}
+.container1 :nth-child(2){
+    max-width: 100%;
+    margin-top: 280px;
+    margin-left: 8%;
+    border-radius: 20px;
+    z-index: 2;
+    overflow: hidden;
+    position: absolute;
+}
+/*--------------------------------------------3-del-----------------------------------*/
+.container2{
+    width: 100%;
+    min-height: 100vh;
+    height: fit-content;
+    overflow: hidden;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(img/brune/slika3.0.jpg);
+    background-size:115%;
+    background-color: var(--rj);
+    position: relative;
+}
+.container2::after{
+    content: "";
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #2e2925a1;
+    background-size: cover;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+}
+
+#vsebina1{
+    height: fit-content;
+    margin: 4%;
+    text-align: center;
+}
+.container_card{
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    
+  }
+  
+  .container_card .card{
+    position: relative;
+    margin: 0 2% ;
+  }
+  
+  .container_card .card .face{
+    width:350px;
+    height: 200px;        /*pazi + translateY*/
+    transition:.4s;
+    
+  }
+  
+  .container_card .card .face.face1{
+    position: relative;
+    background: var(--rj);
+    border-top-right-radius: var(--rob_card);
+    border-top-left-radius: var(--rob_card);
+    display: flex;
+    justify-content: center;
+    align-content:center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);   /*pazi + translateY*/
+  }
+  
+  .container_card .card:hover .face.face1{
+    transform: translateY(0);
+    box-shadow:
+      inset 0 0 60px whitesmoke,
+      inset 20px 0 80px var(--yellow),
+      inset -20px 0 80px var(--rj),
+      inset 20px 0 300px var(--yellow),
+      inset -20px 0 300px var(--rj),
+      0 0 50px #fff,
+      -10px 0 80px var(--yellow),
+      10px 0 80px var(--rj);
+     
+  }
+  
+  .container_card .card .face.face1 .content{
+    opacity: .2;
+    transition:  0.5s;
+    text-align: center;
+    
+  }
+  
+  .container_card .card:hover .face.face1 .content{
+    opacity: 1;
+   
+  }
+  
+  .container_card .card .face.face1 .content i{
+    font-size: 5em;
+    color: white;
+    display: inline-block;
+     
+  }
+  
+  .container_card .card .face.face1 .content h3{
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    
+  
+  }
+  
+  .container_card .card .face.face1 .content a{
+     transition: .5s;
+  }
+  
+  .container_card .card .face.face2{
+     position: relative; 
+     display: flex;
+     border-bottom-right-radius: var(--rob_card);
+     border-bottom-left-radius: var(--rob_card);
+     align-items: center;
+     justify-content: center;
+     padding: 15px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0,0,0,.8);
+    transform: translateY(-100px);
+  }
+  
+  .container_card .card:hover .face.face2{
+    background: #ffffff;
+      transform: translateY(0);
+  
+  
+  }
+
+  .container_card .card .face.face2 .content p, a{
+    font-size: 1rem;
+    margin: 0 ;
+    padding: 0;
+    color:#333;
+  }
+  
+  .container_card .card .face.face2 .content a{
+    text-decoration:none;
+    color: black;
+    box-sizing: border-box;
+    outline : 1px dashed #333;
+    padding: 10px;
+    margin: 15px 0 0;
+    display: inline-block;
+  }
+  
+  .container_card .card .face.face2 .content a:hover{
+    background: #333 ;
+    color: whitesmoke; 
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+  }
+  
+  .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+  }
+
+  /*---------------------------------4-DEL---------------------------------*/
+  .container-ponudba{
+    width: 100%;
+    min-height: 100vh;
+    height: fit-content;
+    overflow: hidden;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('img/les_letnice.jpg');
+    background-size: cover;
+    position: relative;
+}
+.container-ponudba::after{
+    content: "";
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: linear-gradient(0deg, #2e292526 30%, #2E2925 100%), linear-gradient(180deg,#2e292526 30%, #2e2925 100%);
+    background-size: cover;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+}
+  .ponudba{
+    padding-top: 1%;
+  }
+  .ponudba h1{
+    display: flex;
+    margin-bottom: -3%;
+    justify-content: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #000000;
+    word-spacing: 20px;  
+  }
+  .ikone{
+    margin-top: 4%;
+    display: flex;
+    justify-content: center;
+  }
+  .ikone ul{
+    max-width: 1500px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+   text-align: center;
+   flex-flow: wrap;
+   margin-right: 4%;
+   margin-left: 4%;  
+   justify-content: center;
+   align-items: center;
+  }
+  .ikone ul li{
+    margin: 0 4%;
+    display: block;
+    height: 390px;
+    width:300px;
+    text-align: center;
+  }
+
+  .ikone ul li a img{
+    width: 240px;
+    height: 240px;
+    margin-top: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+    opacity: 1;
+    scale: 1;
+    transition:0.3s ease-in-out ;
+    display: block;
+  }
+  .ikone ul li a img:hover{
+    opacity: .5;
+    scale: 1.07;
+  }
+  .ikone ul li h2{
+    margin-top: 7%;
+    margin-left: auto;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #000000;
+    transition: .3s ease-in-out;
+    word-spacing: .4rem;
+    color: #ffffff;
+  }
+  .ikone ul li p{
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5%;
+    color: var(--siva);
+    font-size: 1rem;
+  }
+  /*--------------------noga----------------------------*/
+ .container3{
+    margin: 0;
+   padding-top:6% ;
+    width: 100%;
+    background-color: var(--rj);
+    height:auto;
+  }
+.noga{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    background-color: var(--rj);
+  }
+
+  .box1{
+    width: 32.5%;
+    padding: 3% 0 0 0;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    border-right: #ffffff20 solid 0.1px;
+  }
+  .box2{
+    margin: 0;
+    width: 35%;
+    padding: 1% 2%;
+    text-align: center;
+    border-right: #ffffff20 solid 0.1px;
+  }
+  .box3{
+    width: 32.5%;
+    padding: 3% 0 ;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+  }
+  .box2 img{
+    width: 210px;
+    margin-bottom: 20px;
+  }
+
+  .box2 a img{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.8rem; 
+    margin-left: 3%;
+    scale: 1;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+  }
+  .box2 a img:hover{
+    opacity: 0.5;
+    scale: 1.2;
+  }
+
+  .box1 ul li,
+  .box3 ul li
+  {
+    text-align: left;
+    list-style-type: none;
+    margin-top: 4%;
+  }
+  .box1 ul li a,
+  .box3 ul li a{
+    text-decoration: none;
+    list-style-type: none;
+  }
+  .box1 ul li a p,
+  .box3 ul li a p{
+    font-family:'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    color:var(--siva);
+    font-size: 90%;
+    transition: linear 0.2s;
+  }
+  .box1 ul li a p:hover,
+  .box3 ul li a p:hover{
+    color: var(--yellow);
+  }
+  .kontakt-noga h2{
+    color: white;
+    text-shadow: 1px 1px black;
+    margin-bottom: 15px;
+  }
+  .kontakt-noga ul li{
+    text-decoration: none;
+    list-style-type: none;
+  }
+  .kontakt-noga ul li p,
+  .kontakt-noga ul li a p{
+    font-family:'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    color:var(--siva);
+    font-size: 1rem;
+  }
+  footer{
+    color: var(--siva);
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    padding-bottom: 10px;
+    background-color: var(--rj);
+  }
+/*---------------------------------------------------------------*/
+.nav-mobile {
+  display: none;
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--rj);
+  z-index: 3;
+}
+
+@media only screen and (max-width: 1000.5px) {
+
+  .nav-mobile {
+    display: block;
+    margin-top: 25px;
+  }
+  .nav-pages {
+    width: 100%;
+    padding: 0 ; 
+  }  
+  .nav-pages ul {
+    display: none;
+    left: 0;
+    padding-left: 25%;
+  }
+   .nav-pages ul li a {
+    padding: 15px;
+    line-height: 20px; 
+  }
+  .link{
+    display: block;
+    width: 50%;
+  }
+  #ozadje{
+    background-color: var(--rj);
+    position: absolute;
+    border-bottom: var(--rj)solid 17px;
+    width: 100%;
+    overflow:auto;
+    transition: .5s linear;
+  }
+}
+@media screen and (min-width: 1000.5px) {
+  #povezave {
+    display: flex !important;
+  }  
+  }
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0; }
+  #nav-toggle span,
+  #nav-toggle span:before,
+  #nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 4px;
+    width: 30px;
+    background: white;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 300ms ease-in-out; }
+  #nav-toggle span:before {
+    top: -10px; }
+  #nav-toggle span:after {
+    bottom: -10px; }
+  #nav-toggle.active span {
+    background-color: transparent; }
+    #nav-toggle.active span:before, #nav-toggle.active span:after {
+      top: 0; }
+    #nav-toggle.active span:before {
+      transform: rotate(45deg); }
+    #nav-toggle.active span:after {
+      transform: rotate(-45deg); 
+    }
+    @media (max-width:1800px) {
+    
+      .container2{
+        background-size:155%;
+    }
+      }
+  @media (max-width:1700px) {
+  /*-------------2-slike----------------*/
+  .container1{
+    margin-top: 20vh;
+  }
+  .container1 img:nth-child(1){
+    width: 25rem;
+  }
+  .container1 img:nth-child(2){
+    width: 29rem;
+  }
+  .container1 :nth-child(2){
+      margin-top: 230px;
+  }
+  .container2{
+    background-size:145%;
+}
+  }
+ 
+  @media (max-width:1450px) {
+    /*----------------------2-slike----------------*/
+  .container1{
+    margin-top: 30vh;
+  }
+  .container1 img:nth-child(1){
+    width: 20rem;
+  }
+  .container1 img:nth-child(2){
+    width: 24rem;
+  }
+  .container1 :nth-child(2){
+      margin-top: 190px;
+  }
+  /*------------------scrol slika----------------*/
+    .container2{
+      background-size:155%;
+     
+  }
+  }
+  @media(max-width:1296px){
+    /*------------------scrol slika----------------*/
+    .container2{
+      background-size:200%;
+     
+  }
+}
+  @media (max-width:1250px) {
+    /*----------------------2-slike----------------*/
+ .container1{
+   margin-top: 35vh;
+ }
+ .container1 img:nth-child(1){
+   width: 17rem;
+ }
+ .container1 img:nth-child(2){
+   width: 20rem;
+ }
+ .container1 :nth-child(2){
+     margin-top: 170px;
+ }
+ /*---------------------------------------------------*/
+ .container2{
+  background-size:225%;
+  
+}
+ }
+ @media (max-width:1100px) {
+   header{
+     border-end-end-radius: 0%;
+     border-end-start-radius: 0%;
+   }
+   #nav{
+     height: 100px;
+   }
+   #povezave li{
+     margin-top: 16px;
+   }
+   #logo{
+     width: 220px;
+     padding-top: 5px;
+     margin-bottom: 5px;
+   }
+   #logo img{
+    width: 70%;
+  margin-left: 30px;
+  padding-top: 5%;
+  }
+   .link{
+     font-size: 16px;
+     font-weight: 700;
+     margin-left: 10px;
+     margin-right: 10px;
+     padding: 13px;
+   }
+   
+   /*------------naslovni del-----------------*/
+   #main-box{
+       padding-left: 13%;
+       padding-right: 13%;
+       margin-top: 30%;
+   }
+   .main-container h1{
+       font-size: 3.8rem;
+       margin-bottom: 30px;
+   }
+   .main-container p{
+     font-size: 1.2rem;
+   }
+    /*------------------scrol slika----------------*/
+    .container2{
+      background-size:258%;
+    
+  }
+   /*--------------------NOGA---------------------------*/
+   .box2 img{
+     width: 160px;
+   }
+   .box2 a img{
+     width: 2.2rem; 
+   }
+   .kontakt-noga h2{
+   font-size: 1.2rem;
+ }
+ .kontakt-noga ul li p,
+ .kontakt-noga ul li a p{
+   font-weight: 200;
+   font-size: 0.85rem;
+ }
+ footer{
+   font-size: 0.75rem;
+ }
+   /*------------veličina skok na vrh puščica--------------*/
+   .scrollLink span {
+     font-size: 2rem;
+   }
+}
+ @media (max-width:1000.5px) {
+   h1{
+     font-size: 2rem;
+ }
+
+ /*------------naslovni del-----------------*/
+ #main-box{
+   padding-left: 10%;
+   padding-right: 10%;
+
+}
+.main-container h1{
+   font-size: 3.5rem;
+   margin-bottom: 25px;
+}
+.main-container p{
+ font-size: 1.125rem;
+}
+ /*------------dobrodošli text in 2-slike-----------------*/
+ #vsebina{
+ flex-direction: column;
+}
+.us-box{
+ width: 80%;
+ margin-top: 10vh;
+ font-size: 0.9rem;
+}
+.us-box p{
+ font-size: .95rem;
+}
+.container1{
+ margin-top: 10vh;
+ margin-left: 10%;
+}
+.container1 img:nth-child(1){
+ width: 35vw;
+}
+.container1 img:nth-child(2){
+ width: 40vw;
+ margin-top: 70px;
+ margin-left: 270px;
+}
+ /*------------naša ponudba-------------------*/
+ .ikone ul li h2{
+     font-size: 1.3rem;
+  }
+
+  .ikone ul li p{
+   font-size: 0.9rem;
+  }
+ /*------------postopek izdelave--------------*/
+   .container2{
+     background-size:249%;
+  
+    
+ }
+
+
+ .container_card .card .face{
+   width:280px;
+   height: 150px;        /*pazi + translateY*/
+   
+ }
+ .container_card .card .face.face1{
+   transform: translateY(75px);   /*pazi + translateY*/
+ }
+ .container_card .card .face.face1 .content i{
+   font-size: 3.6em;
+ }
+
+ .container_card .card .face.face1 .content h3{
+   font-size: 1.25em;
+ }
+ .container_card .card .face.face2 .content p, a{
+   font-size: .8rem;
+ 
+ }
+ .container_card .card .face.face2{
+   padding: 15px;
+  transform: translateY(-75px);
+ }
+ /*------------veličina skok na vrh puščica--------------*/
+.scrollLink{
+ z-index: -3;
+}
+ }
+ @media (max-width:875.5px)
+ {
+     /*------------naša ponudba-------------------*/
+   .ikone{
+     margin: 1%;
+   }
+   .ikone ul li{
+     margin: 0%;
+   } 
+   .ikone ul li a img{
+     width: 200px;
+     height: 200px;
+   }
+   .ikone ul li a img:hover{
+     opacity: .5;
+     scale: 1.07;
+   }
+   .ikone ul li h2{
+     margin-top: 7%;
+     margin-left: auto;
+     font-size: 1.5rem;
+     text-transform: uppercase;
+     text-shadow: 2px 2px #000000;
+     transition: .3s ease-in-out;
+     word-spacing: .4rem;
+     color: #ffffff;
+   }
+   .ikone ul li p{
+     max-width: 250px;
+     margin-left: auto;
+     padding-top: 5%;
+     color: var(--siva);
+     font-size: 1rem;
+   }
+ }
+ /*------------------------------------------------------------------------------------*/
+
+ @media (max-width:818px)
+ {
+     /*------------naslovni del-----------------*/
+   #main-box{
+     padding-left: 5%;
+     padding-right: 5%;
+ }
+ .main-container h1{
+     font-size: 3rem;
+     margin-bottom: 25px;
+ }
+ .main-container p{
+   font-size: 1.1rem;
+ }
+   /*------------dobrodošli text in 2-slike-----------------*/
+ #vsebina{
+   margin-top: -3vh;
+  align-items: center;
+}
+.container1{
+ margin-top: 6vh;
+ margin-left: -550px;
+}
+.container1 img:nth-child(1){
+ width: 38vw;
+}
+.container1 img:nth-child(2){
+ width: 43vw;
+ margin-top: 70px;
+ margin-left: 250px;
+}
+/*-----------------------------------karte------------------------------*/
+   .container2{
+     background-size:275%; 
+ }
+ /*--------------------noga----------------------------*/
+.container3{
+padding-top:6% ;
+ width: 100%;
+ height:auto;
+}
+.noga{
+ display: flex;
+ width: 100%;
+ flex-direction: column;
+}
+
+.box1{
+ order: 2;
+ margin: auto;
+ width: 70%;
+ border: none;
+}
+.box2{
+ margin: auto;
+ width: 70%;
+ text-align: center;
+ border: none;
+}
+.box3{
+ margin: auto;
+ padding: 3% 0 ;
+ width: 70%;
+}
+.box2 img{
+ width: 180px;
+ margin-bottom: -10px;
+ margin-top: 20px;
+}
+
+.box2 a img{
+ width: 2.4rem; 
+ margin: 4%;
+}
+
+.box1 ul li,
+.box3 ul li
+{
+ text-align: center;
+ margin-top: 5%;
+}
+.box1 ul li a p,
+ .box3 ul li  p{
+   font-size: 0.95rem;
+ }
+.kontakt-noga h2
+{
+ font-size: 1.6rem;
+ text-align: center;
+}
+footer{
+ margin-top: 40px;
+ font-size: 0.75rem;
+ padding-bottom: 15px;
+}
+ }
+ @media (max-width:723.5px) {
+   .ponudba h1{
+     margin: 20px 0;
+     font-size: 1.8rem;
+   }
+   /*-----------------------------------karte------------------------------*/
+   .container2{
+     background-size:290%;   
+ }
+}
+ @media (max-width:661px)
+    {
+           /*------------naslovni del-----------------*/
+       #main-box{
+              padding-left: 3%;
+              padding-right: 3%;
+              margin-top: 50%;
+        }
+       .main-container h1{
+              font-size: 2.8rem;
+              margin-bottom: 25px;
+       }
+      .main-container p{
+            font-size: 1.05rem;
+        }
+   /*------------dobrodošli text in 2-slike-----------------*/
+  
+    .container1{
+     margin-top: 6vh;
+     margin-left: -440px;
+   }
+  
+   .container1 img:nth-child(2){
+     
+     margin-top: 70px;
+     margin-left: 190px;
+   }
+  /*-----------------------------------karte------------------------------*/
+      .container2{
+        background-size:700%;
+    }
+    }
+    @media (max-width:500px)
+    {
+        /*------------naslovni del-----------------*/
+    .main-container h1{
+        font-size: 3rem;
+        margin-bottom: 25px;
+    }
+    .main-container p{
+      font-size: 1.1rem;
+    }
+      /*------------dobrodošli text in 2-slike-----------------*/
+   .container1{
+    margin-top: 14%;
+    margin-left: -75%;
+  }
+  .container1 img:nth-child(1){
+    width: 40vw;
+  }
+  .container1 img:nth-child(2){
+    width: 45vw;
+    margin-top: 70px;
+    margin-left: 140px;
+  }
+  .us-box h1{
+    font-size: 1.9rem;
+  }
+  .us-box p:nth-child(2){
+    font-size: 0.88rem;
+  }
+  .us-box p:nth-child(3){
+    font-size: 0.92rem;
+  }
+  /*-----------------------------------karte------------------------------*/
+    .scrollLink{
+      z-index: -3;
+    }
+    /*--------------------noga----------------------------*/
+   .container3{
+   padding-top:6% ;
+    width: 100%;
+    height:auto;
+  }
+  .noga{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  .box1,
+  .box2,
+  .box3{
+    width: 85%;
+  }
+  .box2 img{
+    width: 160px;
+    margin-bottom: -10px;
+    margin-top: 20px;
+  }
+  .box2 a img{
+    width: 2.4rem; 
+    margin: 4%;
+  }
+  .box1 ul li a p,
+    .box3 ul li  p{
+      font-size: 0.9rem;
+    }
+  .kontakt-noga h2
+  {
+    margin-top: 20px;
+    font-size: 1.4rem;
+  }
+  footer{
+    margin-top: 50px;
+    font-size: 0.65rem;
+    padding-bottom: 10px;
+  }
+  .container2{
+    background-size:750%;
+}
+    }
+    @media (max-width:450px)
+    {
+        /*------------naslovni del-----------------*/
+ j
+    .main-container h1{
+        font-size: 2.5rem;
+        margin-bottom: 23px;
+    }
+    .main-container p{
+      font-size: 0.95rem;
+    }
+    .container2{
+      background-size:850%;
+  }
+  }
+  @media (max-width:400px) {
+        /*------------dobrodošli text in 2-slike-----------------*/
+   .container1{
+    margin-top: 10%;
+    margin-left: -290px;
+  }
+  .container1 img:nth-child(1){
+    width: 43vw;
+  }
+  .container1 img:nth-child(2){
+    width: 47vw;
+    margin-top: 60px;
+    margin-left: 35%;
+  }
+  .container2{
+    background-size:950%;
+    
+}
+#main-box{
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-top: 80%;
+}
+.main-container h1{
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+.main-container p{
+font-size: 0.9rem;
+}
+/*------------dobrodošli text in 2-slike-----------------*/
+.us-box h1{
+font-size: 1.7rem;
+width: 90%;
+}
+.us-box p:nth-child(2){
+font-size: 0.85rem;
+}
+.us-box p:nth-child(3){
+font-size: 0.88rem;
+}
+  }
+  @media (max-width:357px)
+  {
+      /*------------naslovni del-----------------*/
+    #main-box{
+      padding-left: 0%;
+      padding-right: 0%;
+  }
+  .main-container h1{
+      font-size: 2.3rem;
+      margin-bottom: 20px;
+  }
+  .container2{
+    background-size:1200%;
+}
+.container1{
+  margin-top: 10%;
+  margin-left: -240px;
+}
+.container1 img:nth-child(1){
+  width: 45vw;
+}
+.container1 img:nth-child(2){
+  width: 50vw;
+  margin-top: 60px;
+  margin-left: 35%;
+}
+  }
+
