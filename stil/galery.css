@@ -195,7 +195,7 @@ justify-content: center;
     bottom: 0px;
     right: 0px;
     background-repeat: no-repeat;
-    background-image: url('/img/galerija.jpg');
+    background-image: url('../img/galerija.jpg');
     background-size:cover;
     background-position: 50% 55%;
     z-index: -1;
